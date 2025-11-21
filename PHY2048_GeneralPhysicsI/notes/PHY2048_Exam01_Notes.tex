@@ -1,0 +1,87 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%      PHYSICS 2048L LAB 3 REPORT 
+%      ASPEN JOHNSON
+%      FALL 2025 ~ DR. LEO BAE LAB  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%          Notes on This Document
+%
+%. This is beyond very ambitious for me as someone who has not done ANYTHING with LaTeX
+%,but I think that this assignment will allow me the space to learn LaTeX and the 
+% momentum to continue to execute notes and assignments
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt,letterpaper]{report}
+
+% --------- Packages --------
+\usepackage{newtxtext, newtxmath}
+\usepackage[margin=1in]{geometry}       % 1 inch margins on all sides
+\usepackage{setspace}                   % For line spacing 
+\usepackage{microtype}                  % Better spacing and justification
+\usepackage{titlesec}                   % For Section Title Formatting 
+\usepackage{graphicx}                   % For figures
+\usepackage{caption}                    % Better captions 
+\usepackage{hyperref}                   % Clickable references and links 
+\usepackage{fancyhdr}                   % Custom headers/ footers
+\usepackage{bm}                         % Bold mathematical symbols 
+\usepackage{ragged2e}                   %For the Ragged Right package title alignment
+
+
+% --------- Formatting --------
+
+\setstretch{1.15}
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+
+% --------- Section Style & Heading (Unnumbered + entered)  --------
+\titleformat{\section}
+    {\large\bfseries\raggedright}{}{0em}{}
+
+\titleformat{\subsection}
+    {\normalsize\bfseries\itshape\raggedright}{}{0em}{}
+
+% ---------- (Macros) Formatting Commands ---------
+\newcommand{\para}{\paragraph{}}
+
+% --------- Header & Footer --------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{ PHY2048 Exam 01 Cumulative Notes}
+\fancyfoot[C]{\thepage}
+
+% --------- Title Block --------
+\title{{\Large PHY2048 Examination 01 } \\
+{\large Cumulative Lecture}}
+
+\author{Aspen J. Johnson\\
+Palm Beach State Community College}
+% \title{\huge\vspace{-1cm}\textbf{PHY2048 Lab 3 Report}\\[10pt]
+% \large Determining Spring Constants (k) using Hooke's Law \\[2pt]
+%Aspen J. Johnson\\[4pt]
+% Palm Beach State Community College\vspace{-0.5cm}}
+\date{}
+
+
+% --------- Document Begins --------
+
+\begin{document}   
+\maketitle
+\vspace{1cm}
+\newpage                                % Creates new page --> Will push the below to the next page
+
+
+
+% --------- Section 1: Introduction --------
+\section{1. Introduction}
+\para
+The objective of this experiment was to determine the spring constant $(k)$ for a single spring system using Hooke’s Law. The spring system used most closely resembled an extension spring and was measured prior to adding varying masses. The displacements were measured using a wooden ruler. After the commencement of the experiment, the force $(F)$ was plotted against the extension $(x)$, and the slope of the resulting linear graph provided the spring constant for the single spring with various masses added.
+
+\para
+In this experiment, we take on the role of an engineering design team in which a toy company must ensure that the maximum force supplied by a spring mechanism inside a toy gun does not exceed $20\,\mathrm{N}$ for safety reasons. The spring constant $(k)$ obtained, if accurate, represents how the spring will behave when placed under increased load, thereby ensuring safe and reliable use in other mechanical systems.
+
+
+
+
+\end{document}

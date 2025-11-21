@@ -1,0 +1,239 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%      PHYSICS 2048L LAB 3 REPORT 
+%      ASPEN JOHNSON
+%      FALL 2025 ~ DR. LEO BAE LAB  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%          Notes on This Document
+%
+%. This is beyond very ambitious for me as someone who has not done ANYTHING with LaTeX
+%,but I think that this assignment will allow me the space to learn LaTeX and the 
+% momentum to continue to execute notes and assignments
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt,letterpaper]{article}
+
+% --------- Packages --------
+\usepackage{newtxtext, newtxmath}
+\usepackage[margin=1in]{geometry}       % 1 inch margins on all sides
+\usepackage{setspace}                   % For line spacing 
+\usepackage{microtype}                  % Better spacing and justification
+\usepackage{titlesec}                   % For Section Title Formatting 
+\usepackage{graphicx}                   % For figures
+\usepackage{caption}                    % Better captions 
+\usepackage{hyperref}                   % Clickable references and links 
+\usepackage{fancyhdr}                   % Custom headers/ footers
+\usepackage{bm}                         % Bold mathematical symbols 
+\usepackage{ragged2e}                   %For the Ragged Right package title alignment
+
+
+% --------- Formatting --------
+
+\setstretch{1.15}
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+
+% --------- Section Style & Heading (Unnumbered + entered)  --------
+\titleformat{\section}
+    {\large\bfseries\raggedright}{}{0em}{}
+
+\titleformat{\subsection}
+    {\normalsize\bfseries\itshape\raggedright}{}{0em}{}
+
+% ---------- (Macros) Formatting Commands ---------
+\newcommand{\para}{\paragraph{}}
+
+% --------- Header & Footer --------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{ PHY2048L Lab 3 Hooke's Constant }
+\fancyfoot[C]{\thepage}
+
+% --------- Title Block --------
+\title{{\Huge PHY2048 Lab 3 Report} \\
+{\large Determining Spring Constants w/ Hooke's Law}}
+
+\author{Aspen J. Johnson\\
+Palm Beach State Community College}
+% \title{\huge\vspace{-1cm}\textbf{PHY2048 Lab 3 Report}\\[10pt]
+% \large Determining Spring Constants (k) using Hooke's Law \\[2pt]
+%Aspen J. Johnson\\[4pt]
+% Palm Beach State Community College\vspace{-0.5cm}}
+\date{}
+
+
+% --------- Document Begins --------
+
+\begin{document}   
+\maketitle
+\vspace{1cm}
+\newpage                                % Creates new page --> Will push the below to the next page
+
+
+
+% --------- Section 1: Introduction --------
+\section{1. Introduction}
+\para
+The objective of this experiment was to determine the spring constant $(k)$ for a single spring system using Hooke’s Law. The spring system used most closely resembled an extension spring and was measured prior to adding varying masses. The displacements were measured using a wooden ruler. After the commencement of the experiment, the force $(F)$ was plotted against the extension $(x)$, and the slope of the resulting linear graph provided the spring constant for the single spring with various masses added.
+
+\para
+In this experiment, we take on the role of an engineering design team in which a toy company must ensure that the maximum force supplied by a spring mechanism inside a toy gun does not exceed $20\,\mathrm{N}$ for safety reasons. The spring constant $(k)$ obtained, if accurate, represents how the spring will behave when placed under increased load, thereby ensuring safe and reliable use in other mechanical systems.
+
+
+
+% --------- Section 2: Principles --------
+\section{2. Principles}
+\para 
+Hooke’s Law describes the connection between the force applied to a spring and the resulting displacement of that spring. It states that the force required to restore the spring to its original position, $F$, is directly proportional to its extension or compression, $x$, which is represented by the following equation: 
+
+\begin{center}
+    $F = -kx$
+\end{center}
+
+\para 
+where: 
+\begin{itemize}
+    \item $F$ is the force that restores the spring to its original position
+    \item $k$ is the spring constant, expressed in units of newtons per meter ($\mathrm{N/m}$)
+    \item $x$ is the displacement of the spring from its original equilibrium position
+\end{itemize}
+
+\para 
+It should be noted that the negative sign in Hooke’s Law indicates that the force acts in the opposite direction to the displacement. For the experiment conducted, the force applied to the spring was produced by the weight of the varying masses hung from it. The weight, or gravitational force acting on each mass, is expressed by the equation $F = mg$, where $m$ is the mass and $g$ is the acceleration due to gravity ($9.8\,\mathrm{m/s^2}$).
+
+\para 
+When plotting $F$ versus $x$, a linear relationship is observed where the slope of the graph corresponds to the spring constant $k$. The accuracy of our $k$ measurement depended heavily on preventing overstretching of the spring. This included ensuring that after each measurement, the added weights were promptly removed to avoid permanently deforming the spring beyond its elastic limit.
+
+\para 
+The uncertainty in $k$ was estimated using the slopes of the maximum and minimum trend lines. These lines were obtained by adjusting the $x$ and $y$ values according to the uncertainties in both the measured force and the extension. This approach allowed the range of possible $k$ values to be determined with greater precision.
+
+
+
+% --------- Section 3: Experimental Setup --------
+\section{3. Experimental Setup}
+\para
+The experimental setup included a vertical stand with a small hole near the top which we used to loop 
+a string through that would allow the spring system to hang vertically. The length of the spring system in its 
+original/ equilibrium state was measured so that when weight was added, the displacement could be calculated by
+subtracting the new displacement minus the original length. Instead of a vernier caliper, an analog instrument (i.e a wooden ruler) was used
+as a substitute. 
+
+\para 
+Various sets of known masses were weighed on a digital scale to the nearest 0.1 g and then recorded so that as masses were added,
+connections could be made to the addition of masses and the change in length/displacement of the spring. Measurements were repeated for (insert the number of evenly spaced values recorded) between the minimum and 
+the maximum safe loads for the spring system. 
+
+\para
+Throughout the experiment, particular care was maintained so that too much stress was not added to the spring that would cause overstretching, and therfore not allow 
+the spring to return to equilibrium. Using Excel, a scatter plot graph was created and the "best fit", "min", and "max" value points 
+as well as their corresponding trendlines were plotted. The trendlines served the purpose of allowing us to estimate the constant $k$, otherwise noted as the 
+best-fit slope. 
+
+
+
+% --------- Section 4: Results --------
+\section{4. Results}
+\para 
+The data collected initially was the length of the single spring system at equilibrium, followed by the corresponding changes in length as weight was added sequentially. The graph within this section illustrates that there exists a linear relationship consistent with Hooke’s Law, stating that as force increases, the extension, which is directly proportional, does the same. The table within this section represents a comparison between the theoretical value of the spring and the estimated value of the spring that was calculated throughout the scope of this experiment.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Quantity} & \textbf{Symbol} & \textbf{Value} & \textbf{Units} \\
+\hline
+Experimental spring constant & $k_{\text{estimated}}$ & 5.43 & N/m \\
+Theoretical spring constant & $k_{\text{theoretical}}$ & 5.00 & N/m \\
+Percent error & $\frac{|k_{\text{exp}} - k_{\text{theo}}|}{k_{\text{theo}}} \times 100$ & 8.6 & \% \\
+Average extension (for 1 N) & $x$ & 0.20 & m \\
+Gravitational acceleration & $g$ & 9.81 & m/s$^2$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\para 
+It should be noted that \textbf{Percent Error } represents how close the experimentally determined spring constant is to the theoretical value. Keeping pace with the table, the \textbf{Average Extension} 
+ of 0.20 m can be achieved through the following calculation progression:
+
+
+\begin{center}
+    $F = kx \implies x = \frac{F}{k}$
+\end{center}
+
+
+\begin{center}
+    $x_{average} = \frac{1}{k}$
+\end{center}
+
+
+\begin{center}
+    $x_{average} = \frac{1}{5.43} = 0.184$ m per N $\approx 0.20 $ m per N
+\end{center}
+
+\para 
+The implications from the above progression is that for every 1 N of Force applied to the singular spring system, it sees a displacement of 
+0.20 m or 20 cm.
+\para
+The best-fit equation obtained from Excel was: 
+
+\begin{center}
+    $F = 5.4344x + 0.1023$
+\end{center}
+
+\para 
+Where \textbf{F} is the force in newtons (N) and \textbf{x} is the extension in meters (m).
+
+\para 
+After analyzing the following information, we can estimate the spring constant \textbf{k} to be \textbf{5.43 N/m}. The intercept can be assumed to be a systematic error and could be caused by pre-tension in the spring, where there is an initial force present before it is stretched or compressed.
+
+\para
+The uncertainty can be determined by the \textbf{slopes} of the minimum and maximum trend lines. The data suggests that the estimations are as follows: 
+
+\begin{center}
+    $k = (5.43 \pm 0.01)\,\mathrm{N/m}$
+\end{center}
+
+\para 
+The small uncertainty within the data suggests that the experiment had high precision, which confirms that the single spring system obeyed Hooke’s Law within its elastic range without overstretching or over-compression. This demonstrates the spring’s ability to return to equilibrium after deformation due to added weight. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{/Users/aspenjohnson/academics-fall-2025/PHY2048_GeneralPhysicsI/figures/PHY2048L_Force_vs_Extension.png}
+    \caption{Force vs. Extension graph showing the linear relationship between applied force and spring displacement}
+    \label{fig:force_extension}
+\end{figure}
+
+\newpage
+
+
+% --------- Section 5: Discussion --------
+\section{5. Discussion}
+\para 
+The results from the experiment confirm that the extension of the spring $(x)$ is directly proportional to the amount of force $(F)$ applied by the weight added. The results can also be found to be consistent with Hooke’s Law. Small deviations in the data points, where the values are close to the average or show slight differences, may be due to the use of analog instruments instead of Vernier calipers, as well as the lack of recorded uncertainty data for the various masses. Minor variations in the results could also have been caused by small oscillations, or back-and-forth movement of the spring when attempting to measure its length after adding each weight.
+
+\para
+Overall, the results make sense and are in agreement with theoretical expectations. The experimentally determined value of $k = 5.43\,\mathrm{N/m}$ closely matches the expected spring constant of $5.0\,\mathrm{N/m}$ provided on the spring’s packaging. This supports the accuracy of the collected data and the validity of the experimental procedure. Although small sources of error were present, such as instrument precision and potential parallax error when reading the ruler, the consistency of the results shows that the procedure was effective and reliable for determining the spring constant.
+ 
+
+
+
+% --------- Section 6: Conclusion --------
+\section{6. Conclusion}
+\para
+The spring constant of a single extension spring was experimentally determined using Hooke’s Law. By measuring the spring’s displacement under various known forces and plotting the results, a clear proportional relationship was observed between force and extension. The spring constant was estimated to be $k = (5.43 \pm 0.01)\,\mathrm{N/m}$, which is in close agreement with the expected theoretical value of $5.0\,\mathrm{N/m}$ provided on the spring’s packaging.
+
+\para
+Although certain high-precision instruments, such as Vernier calipers and digital scales measured to the nearest 0.01\,g, were not utilized, the results still demonstrated strong precision and accuracy. Using more basic equipment such as wooden rulers and a digital scale with a 0.1\,g reading produced data that closely followed the ideal linear trend predicted by Hooke’s Law. Despite the absence of detailed uncertainty measurements for each mass, the experiment achieved consistent results, supporting the reliability of the findings.
+
+\para
+These results suggest that with careful data collection and controlled experimental procedures, reliable physical constants can be determined even with standard laboratory tools. Future repetitions of this experiment using higher-resolution measuring devices could further reduce uncertainty and improve accuracy.
+
+
+\section*{7. Acknowledgments}
+\para
+This report was written and formatted with grammatical and proofreading assistance, to ensure that all necessary points were clear and concise provided by AI tools (ChatGPT). Additional guidance on LaTeX formatting, symbols, as well as programming tables and document preparation was obtained from \textit{The Not So Short Introduction to \LaTeXe{}} by Tobias Oetiker et al.\footnote{\url{https://tobi.oetiker.ch/lshort/lshort.pdf}}. The title page layout was inspired by David Tong’s lecture series, \textit{The Quantum Hall Effect}.\footnote{\url{https://www.damtp.cam.ac.uk/user/tong/qhe/one.pdf}}
+
+
+
+\end{document}
