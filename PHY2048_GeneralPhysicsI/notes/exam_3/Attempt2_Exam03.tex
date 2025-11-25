@@ -24,17 +24,17 @@
 \newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
 \makeatother
 
-\title{física eléctrica}
+\title{Exam 3 - Conservation of Energy Reference Sheet}
 \usepackage[brazilian]{babel}
 \usepackage[utf8]{inputenc}
 %cambios de unidades (pt, mm, cm,ex,em,bp,dd,pc,sp) https://tex.stackexchange.com/questions/8260/what-are-the-various-units-ex-em-in-pt-bp-dd-pc-expressed-in-mm
 \advance\topmargin-.8in
 \advance\textheight3in
-\advance\textwidth3in
-\advance\oddsidemargin-1.5in
-\advance\evensidemargin-1.5in
-\parindent0pt
-\parskip2pt
+\advance\textwidth 3in
+\advance\oddsidemargin -1.5in
+\advance\evensidemargin -1.5in
+\parindent 2pt
+\parskip5pt
 \newcommand{\hr}{\centerline{\rule{3.5in}{1pt}}}
 %\colorbox[HTML]{e4e4e4}{\makebox[\textwidth-2\fboxsep][l]{texto}
 \newcommand{\nc}[2][]{%
@@ -50,7 +50,7 @@
 \begin{multicols*}{3}
 
 \tikzstyle{mybox} = [draw=black, fill=white, very thick,
-    rectangle, rounded corners, inner sep=10pt, inner ysep=10pt]
+    rectangle, rounded corners, inner sep= 10pt, inner ysep=10pt]
 \tikzstyle{fancytitle} =[fill=black, text=white, font=\bfseries]
 
 %--------------------------
@@ -63,22 +63,13 @@
   9.80 $\frac{m}{s^2}$
 \item[$J= $] 
     $N\cdot m$ 
+\item[$ Hp = $] 
+    745.7 Watts
+\item[$G = $] 
+   $ 6.67 x 10^{-11} N \cdot \frac{m^2}{kg^2}$
 \item[$eV = $] 
    $ 1.6 \times 10^{-19}$
-\item[$PE = $] 
-    $mgh = (mass)(gravity)(height)$
-\item[$KE = $] 
-    $\frac{1}{2}mv{^2} = kg\frac{m}{s^{2}}\cdot m \Rightarrow N \cdot m \Rightarrow J$
-\item[$E_{tot}=$]
-  $PE + KE = mgh + \frac{1}{2}mv^{2} \Rightarrow constant$
-\item[$m_e = $]
-  Masa del electrón $ = 9.11\times10^{-31}$ kg % \\ $ = 0.511$ MeV/$c^2$
-\item[$m_n = $]
-  Masa de neutrón-protón $ = 1.67\times10^{-27}$ kg % \\ $ = 938$ MeV/$c^2$
-\item[$N_A = $]
-  Número de Avogadro $ = 6.022 \times 10^{23}$ moléculas/mol
-\item[$k_B = $]
-  Constante de Boltzmann $ = 1.38 \times 10^{-23} {\mbox{J}}/{\mbox{K}}$
+
 %\item[$R = $]
 %  Constante de gases ideales$ = 8.31 \frac{\mbox{J}}{\mbox{mol K}} = 0.0821 \frac{\mbox{l atm}}{\mbox{mol K}}$
 %\item[ $c_{\mbox{w}} = $] 
@@ -90,16 +81,51 @@
     \end{minipage}
 };
 %---------------------------------
-\node[fancytitle, right=10pt] at (box.north west) {Constants To Know };
+\node[fancytitle, right=10pt] at (box.north west) {Constants};
 \end{tikzpicture}
 
 %---------------------------
 \begin{tikzpicture}
 \node [mybox] (box){%
     \begin{minipage}{0.3\textwidth}
-    $\Vec{F}_{ij}=k\frac{Q_iQ_j}{r^2_{ij}}\hat{r}_{ij} = \frac{1}{4\pi\epsilon_o}\frac{Q_iQ_j}{r^2_{ij}}\hat{r}_{ij}=Q_i\Vec{E}_j$\\
-    $\Vec{E}_i=k\frac{Q_i}{r^2_{io}}\hat{r}_{io}$ \\
-    $V=k\frac{Q_i}{r_{oi}}$ 
+    $W = \Vec{F} \vec{d} \cdot cos(\theta)$\\
+    $\theta = cos^{-1}(\frac{A \cdot B}{\mid A\mid \cdot \mid B \mid})$ \\
+    $\rho = mv$ \\
+    $m = \frac{\rho}{v} $ \\
+    $m = \frac{2KE}{v^{2}}$ \\
+    $V=k \sqrt{\frac{2KE}{m}}$ \\
+    $KE = \frac{\rho^{2}}{2m}$ \\
+    $\rho = \sqrt{2mKE}$ \\
+    $k = \frac{1}{2}mv^{2}$ \\
+    \begin{itemize}
+        \item[$\Delta PE = $] 
+            $PE_{final} - PE_{initial}$ \\
+            $PE = mgh \Rightarrow (mass)(g)(height)$ \\
+        \item[$KE = $] 
+            $\frac{1}{2}mv{^2} = kg\frac{m}{s^{2}}\cdot m \Rightarrow N \cdot m \Rightarrow J$
+        \item[$E_{tot}=$]
+            $PE + KE = mgh + \frac{1}{2}mv^{2} \Rightarrow constant$
+        \item[$C_{energy}= $]
+            $ \frac{1}{2}kx^{2}_{i} = mgh$
+        \item[$W_{f} = $]
+            $ \mu_{k}mg \cdot d = \frac{1}{2}mv^{2}$
+        \item[$P_{Watts}= $]
+            $\frac{\Delta E}{\Delta t} \Rightarrow \frac{W}{\Delta t}$
+    \end{itemize}
+    \end{minipage}
+
+};
+%---------------------------------
+\node[fancytitle, right= 10pt] at (box.north west) {Equations};
+\end{tikzpicture}
+
+%---------------------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+    $PE_{s \, to \, f} = mgh_{s}$\\
+    $PE_{s \, to \, r} = mgh \Rightarrow mg(h_{s} - h_{r})$ \\
+    $ Ex.01 \Rightarrow  (xx Kg)(9.8)(1.12 m - 0.96m) $ \\
     \end{minipage}
 };
 %---------------------------------
@@ -110,9 +136,11 @@
 \begin{tikzpicture}
 \node [mybox] (box){%
     \begin{minipage}{0.3\textwidth}
-    $\lambda= \frac{q}{L}=\frac{dq}{dL}$, $dq=\lambda dL$\\
-    $\sigma= \frac{q}{A}=\frac{dq}{dA}$, $dq=\sigma dA$\\
-    $\rho= \frac{q}{V}=\frac{dq}{dV}$, $dq=\rho dV$
+    \nc{Sliding Box}\\
+    $\vec{F}\vec{d}\cdot cos(\theta)$\\
+    \nc{Teeth Pulling}\\
+    $(part\,a) W = mg\vec{d}$ \\$ (part\,b) \Rightarrow F_{teeth} = mg$\\
+
     \end{minipage}
 };
 %---------------------------------
@@ -123,16 +151,23 @@
 \begin{tikzpicture}
 \node [mybox] (box){%
     \begin{minipage}{0.3\textwidth}
-     \nc{Campo}\\
-    $d\vec{E} = k\frac{dq}{r^2_{do}}\hat{r}_{do}$\\
-    $\vec{E} = k\bigintsss \frac{\lambda dL}{r^2_{do}}\hat{r}_{do}$, $\vec{E} = k\bigintsss \frac{\sigma dA}{r^2_{do}}\hat{r}_{do}$, $\vec{E} = k\bigintssss \frac{\rho dV}{r^2_{do}}\hat{r}_{do}$\\
-    $\vec{E}_{linea}=\frac{1}{2\pi\epsilon_o}\frac{\lambda}{r}\hat{r}$\\ $\vec{E}_{placa}=\frac{\sigma}{2\epsilon_o}\hat{r}_{\scriptstyle{\perp}}$\\ Entre placas opuestas $\vec{E}_{placas}=\frac{\sigma}{\epsilon_o}\hat{r}_{\scriptstyle{\perp}}$\\
-    $E_i=-\frac{dV}{dx_i}$; $x_i=x,y,z$\\  
-    $\vec{E}=-\vec{\nabla} V$
+    \nc{Angle Between Two Vectors}\\
+    $\theta = cos^{-1}(\frac{A \cdot B}{\mid A \mid \cdot \mid B \mid})$
+    \nc{Find the Dot Product, Given Magnitudes}\\
+    $\vec{A}\cdot\vec{B} = cos(\theta)(\mid A \mid \cdot \mid B \mid)$\\  
+    \nc{Evaluate The Work Graph}
+    $ For\,Triangular\,Areas \rightarrow \frac{1}{2}b(in meters)h(in N)$ \\
+    \nc{Work done By a Force in the x - Direction}
+    $W = \int_{x=low}^{x=upper} \vec{F} \,w.r.t\,dx\,or\,dy$\\
+    $Ex. = \int_{x=0}^{x=4.95} 3x\hat{i}$ \\
+    $ = \int_{0}^{4.95}\frac{3}{2}(4.95)^{2}$\\
+    \nc{Stone in The Well}
+    $(part\,a) = PE = mgh$, where h = 0 = at the edge  \\
+    $(part\,b) = PE = mgh$, where h = negative = dropped below the reference \\
     \end{minipage}
 };
 %------------ campo titulo---------------------
-\node[fancytitle, right=10pt] at (box.north west) {Chapter 8 PPT Problems};
+\node[fancytitle, right=10pt] at (box.north west) {Chapter 7 Quiz Continued};
 \end{tikzpicture}
 %---------------------------------
 %\bigskip
@@ -140,36 +175,78 @@
 \begin{tikzpicture}
 \node [mybox] (box){%
     \begin{minipage}{0.3\textwidth}
-    \nc{Gauss}\\
-    $\Phi=\bigointsss \vec{E}\cdot d\vec{A}=\frac{q_{enc}}{\epsilon_o}$\\
-    \nc{Potencial}\\
-    $V=\frac{U}{q}$\\
-    $V=\vec{E}\cdot\vec{r}$\\
-    $V-V_o=-\bigintsss \vec{E}\cdot d\vec{l}$\\
-    $V=\frac{1}{4\pi\epsilon_o}\bigintsss \frac{dq}{r}$\\
-    $V= k\bigintsss \frac{\lambda dL}{r_{do}}$, $V= k\bigintsss \frac{\sigma dA}{r_{do}}$, $V = k\bigintssss \frac{\rho dV}{r_{do}}$\\
-    \nc{Energía}\\
-    $\Delta U=-\bigintsss_a^b\vec{F}d\vec{l}=-q\bigintsss_a^b\vec{E}d\vec{l}$\\
-    $\Delta U=q\Delta V=-W_{ab}=qEl$
+    \nc{Block Of Mass \& Spring}\\
+    Goal: Solve For Height, h $\Rightarrow \frac{1}{2}kx^{2}_{i} = mgh $\\
+    \nc{Rollercoaster Problem}
+    $(Part\,a)$\,$\\
+    \,Solve\,for\,each\,PE_{A,B,C} = PE = mgh$ \\
+    $\,$\\
+
+    $(Part\,b)\,$\\
+    $Ex = KE_{B} = PE_{A} - PE_{B}$ \\
+    $ \Rightarrow KE_{B} = \frac{1}{2}mv^{2}_{B}, solve for V_{B}$\\
+    $\,$\\
+
+    $(Part\,c)$ \\
+    $W_{gravity\,A\,to\,C} = PE_{A} - PE_{C}$\\
+    $\,$\\
+
+    \nc{Sled's \& Crates}\\
+    $(Part\,a)\,$\\
+    $Ex = (\mu_{k})(m)(g)(d) = \frac{1}{2}mv^{2}$ \\
+    $ Solve\,for\,d,\,where \Rightarrow (\mu_{k})(g)(d)=\frac{1}{2}v^{2}$\\
+    $\,$\\
+
+    $(Part\,b)\,$\\
+    $Scalar Factor = \frac{New\,Velocity}{Old\,Velocity}$
+    $\,$\\
+    $d = (part\,a)(scalar\,factor)$\\
+    $\,$\\
+
+    $ \Rightarrow KE_{B} = \frac{1}{2}mv^{2}_{B}, solve for V_{B}$\\
+    $\,$\\
+
     \end{minipage}
 };
 %------------ potencial titulo  ---------------------
 \node[fancytitle, right=10pt] at (box.north west) {Chapter 8 Quiz};
 \end{tikzpicture}
 
+\newpage
+
 %---------------------------
 \begin{tikzpicture}
 \node [mybox] (box){%
     \begin{minipage}{0.3\textwidth}
-    $C_o\frac{q}{V}=\frac{\epsilon_oA}{d}$, con dieléctrico $C=kC_o=\frac{k\epsilon_oA}{d}$\\
-    $C_p=C_1+C_2+...+C_n=\sum_i^nC_i$\\
-    $C_s=1/C_1+1/C_2+...+1/C_n=(\sum_i^n\frac{1}{C_i})^{-1}$\\
-    $E_{pot-elec}=U=\frac{1}{2}qV=\frac{q^2}{2C}=\frac{1}{2}CV^2$\\
-    $\mu=\frac{\epsilon_oE^2}{2}=\frac{\epsilon_oV^2}{2d^2}=\frac{U}{V_{olumen}}$
+    \nc{Spring's \& Block's With Speed}
+   $(Part\,a\, Frictionless)\,$\\
+    $Solve\, for\, V_{f}, \,where \rightarrow kx^{2}_{i} = mv^{2}_{f}$
+    $\,$\\
+    $d = (part\,b\, COME BACK)(scalar\,factor)$\\
+    $\,$\\
+
+    \nc{Sliding Block With Falling Ball}
+    $ Plug\,and\,Chug\,and \,Solve \,for \,v_{f}$\\
+    $\,$\\
+    $m_{2}gh= \frac{1}{2}(m_{1}+m_{2})(V^{2}_{f})+(\mu_{k}m_{1}g)(h)$\\
+    $\,$\\
+
+    \nc{Joules To Watts}
+    $(1)\,J = \vec{F_{g}}\cdot\vec{d}$\\
+
+    $(2)\,W = \frac{J}{\Delta t}$\\
+    \nc{Power Of A Car Engine}
+
+    $\frac{50mi}{h}\times\frac{1069.34m}{1mi}\times\frac{1h}{60 min}\times\frac{1\,min}{60\,sec}\times = \frac{m}{s}$\\
+    $\Delta KE =\frac{1}{2}mv^{2}$\\
+    $P_{Watts} = \frac{\Delta Ke}{t}$\\
+    \nc{Older \& Newer Cars}
+    $P_{Older} = \frac{E_{old}}{\Delta t} = \frac{\frac{1}{2} mv^{2}}{\Delta t} $\\
+    $\frac{P_{new}}{P_{Old}} = (v^{2})$\\
     \end{minipage}
 };
 %---------------------------------
-\node[fancytitle, right=10pt] at (box.north west) {Chapter 9 PPT Problems};
+\node[fancytitle, right=10pt] at (box.north west) {Chapter 8 Quiz Continued};
 \end{tikzpicture}
 
 %\bigskip\\
@@ -177,41 +254,65 @@
 \begin{tikzpicture}
 \node [mybox] (box){%
     \begin{minipage}{0.3\textwidth}
-    $I=\frac{V}{R}=\frac{\Delta q}{\Delta t}=\frac{dq}{dt}=JA=\int \vec{J}\cdot\vec{A}$\\
-    $v_d=\frac{I}{nAe}=\frac{J}{ne}=a\tau=\frac{eE\lambda}{m}$\\
-    $R=\rho\frac{L}{A}$, $\rho=\frac{E}{J}=\frac{1}{\sigma}=\frac{m_e}{ne^2\tau}$, $\vec{J}=\sigma \vec{E}=-ne\vec{v}_d$\\
-     $R_s=R_1+R_2+...+R_n=\sum_i^nR_i$\\
-    $R_p=1/R_1+1/R_2+...+1/R_n=(\sum_i^n\frac{1}{R_i})^{-1}$\\
-    $P=IV=I^2R=\frac{V^2}{R}=\frac{dU}{dt}$, $dU=dqV_{ab}=IdtV_{ab}$\\
+    \nc{Calculating Speed From Momentum}
+    $\rho = \sqrt{2mKE}\, solve\,for\,m$\\
+    $v = \sqrt(\frac{2KE}{m}),\, solve \,for \,v$\\
     \end{minipage}
 };
 %---------------------------------
 \node[fancytitle, right=10pt] at (box.north west) {Chapter 9 Quiz};
 \end{tikzpicture}
 
+
 %\bigskip\\
 %---------------------------
 \begin{tikzpicture}
 \node [mybox] (box){%
     \begin{minipage}{0.3\textwidth}
-    $F=\frac{\mu_o}{2\Pi}\frac{qvI}{r}$\\
-    $\vec{F}=q\vec{v}\times\vec{B}$,$F=qvBsen\theta$\\
-    $B=\frac{\mu_oI}{2\pi r}$\\
-    $\vec{F}=q\vec{E}+q\vec{v}\times\vec{B}$\\
-    $B=n\mu_oI$\\
-    $\vec{F}=i\vec{l}\times\vec{B}$
+    \nc{Calculating Speed From Momentum}
+    $\rho = \sqrt{2mKE}\, solve\,for\,m$\\
+    $v = \sqrt(\frac{2KE}{m}),\, solve \,for \,v$\\
+    \nc{Particle and Magnitude}
+    $P_{x}=(m)(\hat{i})$\\
+    $P_{y} = (m)(\hat{j})$\\
+    $\rho = \sqrt{(\rho_{x})^{2}+(\rho_{y})^{2}}$\\
+    $ \theta = tan^{-1}(\frac{\rho_{y}}{\rho_{x}})$\\
+    \nc{Estimated Force-time Graph (Triangle)}
+    $J =\frac{1}{2}(t_{b}-t_{a}\cdot \vec{F_{max}})$\\
+    \nc{Average Force Over Interval (cont)}
+    $\vec{F_{avg}}=\frac{J}{t_{b}-t_{a}} \Rightarrow \frac{F_{max}}{2}$\\
+
+    \nc{Impulse and Energy Change in 1D - Ball Reversed}
+    $J_{x}=\Delta\rho_{x} = mv_{f}=mv{i}$\\
+
+    \nc{Complete Inelastic Collision in 2D - Stick}
+    $\vec{v_f} = \frac{m_{1}v_{1i}+m_{2}v_{2i}}{m_{1}+m_{2}}$\\
+    \nc{Inelastic Collision in Component Form}
+    $\vec{v_fx} = \frac{m_{1}v_{1ix}+m_{2}v_{2ix}}{m_{1}+m_{2}}$\\
+    
+    $\vec{v_fy} = \frac{m_{1}v_{1iy}+m_{2}v_{2iy}}{m_{1}+m_{2}}$\\
+
+    \nc{1D Elastic Collision of 2 Masses - Head On}
+    $\vec{v_1f} = \frac{m_{1}-m_{2}}{m_{1}+m_{2}}v_{1i}+ \frac{2m_{2}}{m_{1}+m_{2}}v_{2i}$\\
+    
+    $\vec{v_1f} = \frac{2m{1}}{m_{1}+m_{2}}v_{1i}+ \frac{m_{2}-m_{1}}{m_{1}+m_{2}}v_{2i}$\\
+
     \end{minipage}
 };
 %---------------------------------
-\node[fancytitle, right=10pt] at (box.north west) {Fuentes Campo Magnético};
+\node[fancytitle, right=10pt] at (box.north west) {Chapter 9 Quiz Continued};
 \end{tikzpicture}
-\bigskip\\
+\bigskip
+\bigskip
+
+
 %---------------------------------
 \begin{tikzpicture}
 \node [mybox] (box){%
     \begin{minipage}{0.3\textwidth}
-	\nc{Biot-Savart}
-	$d\vec{B}=\frac{\mu_o}{4\pi}\frac{Id\vec{l}\times\vec{r}}{r^3}$\\
+	\nc{Center of Mass Velocity - Fopr Any System}
+    $\vec{v_compatibility} = \frac{m_{1}v_{1i}+m_{2}v_{2i}}{m_{1}+m_{2}}$\\
+    $\vec{v_{cm,before}}v_{cm, before} = \vec{v_{cm, after}}$\\
 	$B=\frac{\mu_oI}{4\pi R^2}\Delta l_{arco}$\\
 	$B=\frac{\mu_oI}{4\pi R}(cos\theta_1-cos\theta_2)$\\
 	\nc{Cargas en Movimiento}\\
@@ -220,9 +321,9 @@
 	\end{minipage}
 };
 %---------------------------------
-\node[fancytitle, right=10pt] at (box.north west) {Cargas en Movimiento con Presencia de Campos};
+\node[fancytitle, right=10pt] at (box.north west) {Quiz Chapter 09 Continued};
 \end{tikzpicture}
-\bigskip\\
+\bigskip
 
 
 
