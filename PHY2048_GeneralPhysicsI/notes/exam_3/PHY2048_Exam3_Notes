@@ -1,0 +1,100 @@
+\documentclass[10pt,landscape,a4paper]{article}
+
+% ---------- Encoding / language ----------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\shorthandoff{"} % avoids babel quote shorthands messing with code/math
+
+% ---------- Layout ----------
+\usepackage[top=5mm,bottom=5mm,left=5mm,right=5mm]{geometry}
+\usepackage{multicol}
+\setlength{\columnsep}{3mm}   % space between columns
+\setlength{\columnseprule}{0pt}
+
+% ---------- Fonts (safe combo) ----------
+\usepackage[nosf]{kpfonts}      % math + serif text
+\usepackage[t1]{sourcesanspro}  % sans font available via \textsf
+
+% ---------- Useful extras ----------
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{shapes,positioning,arrows,fit,calc,graphs,graphs.standard}
+\usepackage[framemethod=tikz]{mdframed}
+
+% Optional: redefine bar to overline (only if you want this behavior)
+\let\bar\overline
+
+% ---------- Minimal styling ----------
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% compact section spacing
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+  {-0.6ex plus -.2ex minus -.2ex}%
+  {0.3ex plus .1ex}%
+  {\normalfont\small\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+  {-0.5ex plus -.2ex minus -.2ex}%
+  {0.2ex plus .1ex}%
+  {\normalfont\footnotesize\bfseries}}
+\makeatother
+
+% ---------- Document ----------
+\begin{document}
+\footnotesize
+
+\begin{center}
+  {\Large\bfseries Cheatsheet Title}\\[-2pt]
+  \small Subtitle / Course / Name
+\end{center}
+
+\begin{multicols*}{5}
+
+\section{Section 1}
+Short text. Inline math $a^2+b^2=c^2$.
+
+\subsection{Key points}
+\begin{itemize}\itemsep0pt
+  \item Point one
+  \item Point two
+\end{itemize}
+
+\section{Section 2}
+\subsection{A small table}
+\begin{tabular}{@{}ll@{}}
+Thing & Meaning\\
+\hline
+$\alpha$ & first\\
+$\beta$ & second
+\end{tabular}
+
+\section{Section 3}
+\subsection{A boxed formula}
+\begin{mdframed}[linewidth=0.4pt,roundcorner=2pt,innerleftmargin=4pt,
+                 innerrightmargin=4pt,innertopmargin=3pt,innerbottommargin=3pt]
+\[
+\int_a^b f(x)\,dx = F(b)-F(a)
+\]
+\end{mdframed}
+
+\section{Section 4}
+\subsection{Tiny TikZ example}
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+  \node[circle,draw] (A) {A};
+  \node[circle,draw,right=1.2cm of A] (B) {B};
+  \draw[->] (A) -- (B);
+\end{tikzpicture}
+\end{center}
+
+\section{Section 5}
+More filler text to show column flow.  
+Add your content directly here.
+
+\end{multicols*}
+\end{document}
