@@ -33,6 +33,7 @@
 
 % ---------- Header/Footer ----------
 \pagestyle{fancy}
+\setlength{\headheight}{14pt} % Fix for fancyhdr warning
 \fancyhf{}
 \fancyhead[C]{Linear Algebra – Network Flow Project}
 \fancyfoot[C]{\thepage}
@@ -71,7 +72,7 @@ We model traffic flow among five intersections labeled A, B, C, D, and E. A tota
     \item 10 cars/min exit at Node E
 \end{itemize}
 
-The remaining cars continue traveling along the one-way streets shown in Figure~\ref{fig:networkdiagram}. The unknown traffic flows are:
+The remaining cars continue traveling along one-way streets in the network. The unknown traffic flows are:
 
 \[
 x_1 : A \to B,\quad
@@ -80,7 +81,6 @@ x_3 : B \to D,\quad
 x_4 : C \to D,\quad
 x_5 : D \to E.
 \]
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{3. System of Equations}
@@ -171,50 +171,47 @@ We form the augmented matrix:
 0 & 0 & 1 & 1 & -1 & 20\\
 0 & 0 & 0 & 0 & 1 & 10
 \end{array}
-\right]
+\right].
 \]
 
 \subsection*{Row Operations}
 
 (1) \(R_2 \leftarrow R_2 - R_1\):
 \[
-R_2 = [0,-1,-1,0,0,-60]
+R_2 = [0,-1,-1,0,0,-60].
 \]
 
-(2) Multiply \(R_2\) by -1:
+(2) Multiply \(R_2\) by \(-1\):
 \[
-R_2 = [0,1,1,0,0,60]
+R_2 = [0,1,1,0,0,60].
 \]
 
 (3) \(R_3 \leftarrow R_3 - R_2\):
 \[
-R_3 = [0,0,-1,-1,0,-30]
+R_3 = [0,0,-1,-1,0,-30].
 \]
 
-(4) Multiply \(R_3\) by -1:
+(4) Multiply \(R_3\) by \(-1\):
 \[
-R_3 = [0,0,1,1,0,30]
+R_3 = [0,0,1,1,0,30].
 \]
 
 (5) Eliminate the 1 in column 3 of \(R_4\):
-
 \[
-R_4 \leftarrow R_4 - R_3 = [0,0,0,0,-1,-10]
+R_4 \leftarrow R_4 - R_3 = [0,0,0,0,-1,-10].
 \]
 
 (6) Add \(R_5\) to \(R_4\):
-
 \[
-R_4 = [0,0,0,0,0,0]
+R_4 = [0,0,0,0,0,0].
 \]
 
 (7) Eliminate the 1 in column 2 of \(R_1\):
-
 \[
-R_1 \leftarrow R_1 - R_2 = [1,0,0,1,0,70]
+R_1 \leftarrow R_1 - R_2 = [1,0,0,1,0,70].
 \]
 
-Final RREF:
+The final row-reduced form is:
 
 \[
 \left[
@@ -225,26 +222,26 @@ Final RREF:
 0 & 0 & 0 & 0 & 0 & 0\\
 0 & 0 & 0 & 0 & 1 & 10
 \end{array}
-\right]
+\right].
 \]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{6. General Solution}
 
-From the RREF system:
+From the reduced system, we obtain:
 
 \[
 \begin{aligned}
-x_1 + x_4 &= 70\\
-x_2 - x_4 &= 30\\
-x_3 + x_4 &= 30\\
-x_5 &= 10
+x_1 + x_4 &= 70,\\
+x_2 - x_4 &= 30,\\
+x_3 + x_4 &= 30,\\
+x_5 &= 10.
 \end{aligned}
 \]
 
-Let the free variable be:
+Let the free variable be
 \[
-x_4 = t
+x_4 = t.
 \]
 
 Then the full solution is:
@@ -252,19 +249,41 @@ Then the full solution is:
 \[
 \boxed{
 \begin{aligned}
-x_1 &= 70 - t\\
-x_2 &= 30 + t\\
-x_3 &= 30 - t\\
-x_4 &= t\\
+x_1 &= 70 - t,\\
+x_2 &= 30 + t,\\
+x_3 &= 30 - t,\\
+x_4 &= t,\\
 x_5 &= 10
 \end{aligned}}
-\qquad \text{where } 0 \le t \le 30.
+\qquad \text{for any real } t.
 \]
 
-The bounds come from the physical requirement that all traffic flows must remain nonnegative.
+To make sense in the traffic context, all flows must be nonnegative:
+
+\[
+\begin{aligned}
+x_1 = 70 - t &\ge 0 \Rightarrow t \le 70,\\
+x_2 = 30 + t &\ge 0 \Rightarrow t \ge -30,\\
+x_3 = 30 - t &\ge 0 \Rightarrow t \le 30,\\
+x_4 = t &\ge 0 \Rightarrow t \ge 0.
+\end{aligned}
+\]
+
+Combining these inequalities, we obtain:
+\[
+0 \le t \le 30.
+\]
+
+Thus every physically meaningful traffic pattern in this network is described by the solution above with \(0 \le t \le 30\).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{7. Conclusion}
 
+This project modeled a traffic network using a system of linear equations. By applying the conservation-of-flow principle at each node, a five-equation system in five unknowns was constructed and written in matrix form as \(A\mathbf{x} = \mathbf{b}\). Gaussian elimination was then used to row-reduce the augmented matrix and obtain a one-parameter family of solutions.
+
+The final solution shows how different choices of the free variable \(t\) correspond to different, but consistent, traffic flow patterns through the network, as long as all flows remain nonnegative. This demonstrates how Linear Algebra provides a powerful framework for analyzing real-world systems such as transportation networks.
+
+\par
+\textit{Disclaimer: This report's structure and wording were refined with the assistance of AI-based proofreading tools and general LaTeX references. All mathematical reasoning, computations, and interpretations are my own work.}
 
 \end{document}
