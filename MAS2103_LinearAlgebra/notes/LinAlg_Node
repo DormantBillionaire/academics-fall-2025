@@ -81,12 +81,6 @@ x_4 : C \to D,\quad
 x_5 : D \to E.
 \]
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.85\linewidth]{network-diagram-placeholder.png}
-    \caption{Traffic Network with Five Nodes (Diagram Placeholder).}
-    \label{fig:networkdiagram}
-\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{3. System of Equations}
