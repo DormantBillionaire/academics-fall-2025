@@ -1,0 +1,276 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    LINEAR ALGEBRA – NETWORK FLOW PROJECT
+%    ASPEN JOHNSON
+%    FALL 2025 ~ PBSC
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt,letterpaper]{article}
+
+% ---------- Packages ----------
+\usepackage{newtxtext, newtxmath}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{bm}
+\usepackage{ragged2e}
+\usepackage{amsmath}
+
+% ---------- Formatting ----------
+\setstretch{1.2}
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+
+\titleformat{\section}
+  {\large\bfseries\raggedright}{}{0em}{}
+
+\titleformat{\subsection}
+  {\normalsize\bfseries\itshape\raggedright}{}{0em}{}
+
+% ---------- Header/Footer ----------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{Linear Algebra – Network Flow Project}
+\fancyfoot[C]{\thepage}
+
+% ---------- Title ----------
+\title{
+{\Large MAT0020 – Network Flow Project}\\[4pt]
+{\large Traffic Flow System with Five Nodes}
+}
+\author{Aspen J. Johnson\\Palm Beach State College}
+\date{}
+
+% ---------- Document Begins ----------
+\begin{document}
+\maketitle
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{1. Introduction}
+
+This project explores a Network Flow system using concepts from Linear Algebra, specifically the use of linear systems, coefficient matrices, and Gaussian elimination. The objective is to design a realistic traffic network consisting of five nodes, write its corresponding system of equations based on flow conservation, form the coefficient matrix, and solve the system completely.
+
+Traffic flow networks provide a practical example of linear systems in which every intersection (node) must satisfy the condition that the total inflow equals the total outflow. By modeling one-way roads as directed edges and vehicle rates as variables, the system can be represented algebraically and solved for all possible patterns of traffic movement through the network.
+
+This report constructs a five-node downtown traffic model, derives the associated flow equations, and demonstrates a complete step-by-step solution using Gaussian elimination.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{2. Network Description}
+
+We model traffic flow among five intersections labeled A, B, C, D, and E. A total of 100 cars per minute enter the system at Node A. At various nodes, cars leave the network:
+
+\begin{itemize}
+    \item 40 cars/min exit at Node B
+    \item 30 cars/min exit at Node C
+    \item 20 cars/min exit at Node D
+    \item 10 cars/min exit at Node E
+\end{itemize}
+
+The remaining cars continue traveling along the one-way streets shown in Figure~\ref{fig:networkdiagram}. The unknown traffic flows are:
+
+\[
+x_1 : A \to B,\quad
+x_2 : A \to C,\quad
+x_3 : B \to D,\quad
+x_4 : C \to D,\quad
+x_5 : D \to E.
+\]
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.85\linewidth]{network-diagram-placeholder.png}
+    \caption{Traffic Network with Five Nodes (Diagram Placeholder).}
+    \label{fig:networkdiagram}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{3. System of Equations}
+
+Using the conservation rule \textbf{inflow = outflow} at each node, we obtain:
+
+\subsection*{Node A}
+\[
+x_1 + x_2 = 100
+\]
+
+\subsection*{Node B}
+\[
+x_1 = 40 + x_3
+\]
+
+\subsection*{Node C}
+\[
+x_2 = 30 + x_4
+\]
+
+\subsection*{Node D}
+\[
+x_3 + x_4 = 20 + x_5
+\]
+
+\subsection*{Node E}
+\[
+x_5 = 10
+\]
+
+This produces a system of five linear equations in five unknowns.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{4. Coefficient Matrix}
+
+Writing each equation in standard form:
+
+\[
+\begin{aligned}
+x_1 + x_2 &= 100\\
+x_1 - x_3 &= 40\\
+x_2 - x_4 &= 30\\
+x_3 + x_4 - x_5 &= 20\\
+x_5 &= 10
+\end{aligned}
+\]
+
+The coefficient matrix $A$, variable vector $\mathbf{x}$, and constant vector $\mathbf{b}$ are:
+
+\[
+A=
+\begin{bmatrix}
+1 & 1 & 0 & 0 & 0\\
+1 & 0 & -1 & 0 & 0\\
+0 & 1 & 0 & -1 & 0\\
+0 & 0 & 1 & 1 & -1\\
+0 & 0 & 0 & 0 & 1
+\end{bmatrix},
+\qquad
+\mathbf{x}=
+\begin{bmatrix}
+x_1\\ x_2\\ x_3\\ x_4\\ x_5
+\end{bmatrix},
+\qquad
+\mathbf{b}=
+\begin{bmatrix}
+100\\ 40\\ 30\\ 20\\ 10
+\end{bmatrix}.
+\]
+
+Thus the matrix equation is:
+\[
+A\mathbf{x}=\mathbf{b}.
+\]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{5. Solving the System (Gaussian Elimination)}
+
+We form the augmented matrix:
+
+\[
+\left[
+\begin{array}{ccccc|c}
+1 & 1 & 0 & 0 & 0 & 100\\
+1 & 0 & -1 & 0 & 0 & 40\\
+0 & 1 & 0 & -1 & 0 & 30\\
+0 & 0 & 1 & 1 & -1 & 20\\
+0 & 0 & 0 & 0 & 1 & 10
+\end{array}
+\right]
+\]
+
+\subsection*{Row Operations}
+
+(1) \(R_2 \leftarrow R_2 - R_1\):
+\[
+R_2 = [0,-1,-1,0,0,-60]
+\]
+
+(2) Multiply \(R_2\) by -1:
+\[
+R_2 = [0,1,1,0,0,60]
+\]
+
+(3) \(R_3 \leftarrow R_3 - R_2\):
+\[
+R_3 = [0,0,-1,-1,0,-30]
+\]
+
+(4) Multiply \(R_3\) by -1:
+\[
+R_3 = [0,0,1,1,0,30]
+\]
+
+(5) Eliminate the 1 in column 3 of \(R_4\):
+
+\[
+R_4 \leftarrow R_4 - R_3 = [0,0,0,0,-1,-10]
+\]
+
+(6) Add \(R_5\) to \(R_4\):
+
+\[
+R_4 = [0,0,0,0,0,0]
+\]
+
+(7) Eliminate the 1 in column 2 of \(R_1\):
+
+\[
+R_1 \leftarrow R_1 - R_2 = [1,0,0,1,0,70]
+\]
+
+Final RREF:
+
+\[
+\left[
+\begin{array}{ccccc|c}
+1 & 0 & 0 & 1 & 0 & 70\\
+0 & 1 & 0 & -1 & 0 & 30\\
+0 & 0 & 1 & 1 & 0 & 30\\
+0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 1 & 10
+\end{array}
+\right]
+\]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{6. General Solution}
+
+From the RREF system:
+
+\[
+\begin{aligned}
+x_1 + x_4 &= 70\\
+x_2 - x_4 &= 30\\
+x_3 + x_4 &= 30\\
+x_5 &= 10
+\end{aligned}
+\]
+
+Let the free variable be:
+\[
+x_4 = t
+\]
+
+Then the full solution is:
+
+\[
+\boxed{
+\begin{aligned}
+x_1 &= 70 - t\\
+x_2 &= 30 + t\\
+x_3 &= 30 - t\\
+x_4 &= t\\
+x_5 &= 10
+\end{aligned}}
+\qquad \text{where } 0 \le t \le 30.
+\]
+
+The bounds come from the physical requirement that all traffic flows must remain nonnegative.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{7. Conclusion}
+
+
+\end{document}
