@@ -40,8 +40,8 @@
 
 % ---------- Title ----------
 \title{
-{\Large MAT0020 – Network Flow Project}\\[4pt]
-{\large Traffic Flow System with Five Nodes}
+{\Large MAS2103-3 – Network Flow Project}\\[4pt]
+{\large Traffic Flow System with Nodes}
 }
 \author{Aspen J. Johnson\\Palm Beach State College}
 \date{}
@@ -54,7 +54,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{1. Introduction}
 
-This project explores a Network Flow system using concepts from Linear Algebra, specifically the use of linear systems, coefficient matrices, and Gaussian elimination. The objective is to design a realistic traffic network consisting of five nodes, write its corresponding system of equations based on flow conservation, form the coefficient matrix, and solve the system completely.
+This project explores a Network Flow system using concepts from Linear Algebra, specifically the use of linear systems, coefficient matrices, and Gaussian elimination. My main objective is to design a realistic traffic network consisting of five nodes, write its corresponding system of equations based on flow conservation, form the coefficient matrix, and solve the system completely.
 
 Traffic flow networks provide a practical example of linear systems in which every intersection (node) must satisfy the condition that the total inflow equals the total outflow. By modeling one-way roads as directed edges and vehicle rates as variables, the system can be represented algebraically and solved for all possible patterns of traffic movement through the network.
 
@@ -62,8 +62,15 @@ This report constructs a five-node downtown traffic model, derives the associate
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{2. Network Description}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.85\linewidth]{/Users/aspenjohnson/Documents/GitHub/academics-fall-2025/MAS2103_LinearAlgebra/figures/Node_ProjectImage.jpeg}
+    \caption{My hand-drawn diagram of the five-node traffic flow network showing the incoming 100 cars at Node A, the directed flow variables \(x_1, x_2, x_3, x_4, x_5\), and the exit rates at Nodes B, C, D, and E.}
+    \label{fig:network_diagram}
+\end{figure}
 
 We model traffic flow among five intersections labeled A, B, C, D, and E. A total of 100 cars per minute enter the system at Node A. At various nodes, cars leave the network:
+
 
 \begin{itemize}
     \item 40 cars/min exit at Node B
@@ -81,6 +88,8 @@ x_3 : B \to D,\quad
 x_4 : C \to D,\quad
 x_5 : D \to E.
 \]
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{3. System of Equations}
@@ -284,6 +293,6 @@ This project modeled a traffic network using a system of linear equations. By ap
 The final solution shows how different choices of the free variable \(t\) correspond to different, but consistent, traffic flow patterns through the network, as long as all flows remain nonnegative. This demonstrates how Linear Algebra provides a powerful framework for analyzing real-world systems such as transportation networks.
 
 \par
-\textit{Disclaimer: This report's structure and wording were refined with the assistance of AI-based proofreading tools and general LaTeX references. All mathematical reasoning, computations, and interpretations are my own work.}
+\textit{Disclaimer: This report's structure and wording were refined with the assistance of AI-based proofreading tools and general LaTeX references. All mathematical reasoning, computations, and interpretations are my own work, and were supported by the following video walkthrough: \href{https://youtu.be/eHoKS4Ccd74?si=7HaWx7pFMYk17dIx}{Network Flow Explanation}, as well as office hours with Professor Abdullah.}
 
 \end{document}
