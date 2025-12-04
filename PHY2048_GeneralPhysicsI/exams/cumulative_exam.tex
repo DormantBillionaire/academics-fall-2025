@@ -47,219 +47,170 @@ The content covered in the final exam will be a culmination of quiz problems fro
 \bigskip
 
 \hrule
-\bigskip
 %%%%%%%%%%%%%%%%% CHAPTER 1 QUIZ SECTION %%%%%%%%%%%%%%%%%%
 
-\text{\large \bf Chapter 1 Quiz Problems } 
+\paragraph{\large \bf Chapter 1 Quiz Problems } 
+
+%%%%%%%%%%%% CHAPTER 1 PROBLEM 1 %%%%%%%%%%%%%%%%
 \bigskip
+\paragraph*{\bf Problem 1 -- Milky Way \& Andromeda Scale Model}
+\smallskip
 
-\paragraph*{\bf Problem 1 - Milky Way Galaxy Distance}
+\paragraph{\bf Using Proportions for Scale Models}
+\smallskip
 
-\paragraph{The disk of the Milky Way galaxy is about $1.0 \cross 10^{5}$ light-years (ly) in diameter. The distance from the center of the Milky Way to the center of the Andromeda galaxy is about 2.0 million ly.}
-\medskip
+The disk of the Milky Way galaxy is about $1.0 \times 10^{5}$ ly in diameter.  
+The distance from the center of the Milky Way to the center of the Andromeda galaxy is about $2.0\times 10^{6}$ ly.
 
 \begin{enumerate}[label=(\alph*)]
-\item Imagine a scale model where the two galaxies are represented by circular plates. If the plate representing the Milky Way has a diameter of 16 cm, what would be the distance between the centers of the two plates in meters? 
-\newline
+    \item \textbf{Distance between galaxy centers in the model}
 
-\begin{align*}
-    \frac{1.0 \times 10^{5} \,ly}{2.0 \times 10^{6} \,ly} = \frac{\,diameter \,in \,cm}{x}
-\end{align*}
+    If the Milky Way is represented by a circular plate of diameter $d_{\text{MW,model}} = \SI{16}{cm}$, then the scale factor is
+    \[
+        \frac{d_{\text{MW,real}}}{d_{\text{MW,model}}}
+        = \frac{1.0\times 10^{5}~\text{ly}}{16~\text{cm}}.
+    \]
+    For the model distance between the centers:
+    \[
+        \frac{d_{\text{MW,real}}}{d_{\text{And,real}}}
+        = \frac{1.0\times 10^{5}~\text{ly}}{2.0\times 10^{6}~\text{ly}}
+        = \frac{16~\text{cm}}{x_{\text{cm}}}.
+    \]
+    Solve for $x_{\text{cm}}$ and convert:
+    \[
+        x_{\text{m}} = \frac{x_{\text{cm}}}{100}.
+    \]
 
-From here, solve the proportion for x and take cm $\rightarrow$ m, where $ 1\,cm = \frac{1m}{100 cm}$
-\bigskip
+    \item \textbf{Diameter of Local Group in the same scale}
 
-\item What if? The Milky Way and Andromeda galaxies are members of the Local Group, a cluster of more than 50 galaxies spread across a spherical volume with a diameter of 10 million light years. Imagine you could create a scale model of the Local Group with the Milky Way and represented as circular plates with diameters of 16 cm. What would be the diameter (in m) of your spherical scale model of the Local Group?
-
-
-\begin{align*}
-    \frac{1.0 \times 10^{5} \,ly}{1.0 \times 10^{7} \,ly} = \frac{\,diameter \,in \,cm}{x}
-\end{align*}
-
-From here, solve the proportion for x and take from cm $\rightarrow$ m, where $ 1\,cm = \frac{1m}{100 cm}$
-
+    The Local Group has diameter $D_{\text{LG,real}} = 1.0\times 10^{7}~\text{ly}$.  
+    Using the same scale (Milky Way $\to 16~\text{cm}$):
+    \[
+        \frac{d_{\text{MW,real}}}{D_{\text{LG,real}}}
+        = \frac{1.0\times 10^{5}~\text{ly}}{1.0\times 10^{7}~\text{ly}}
+        = \frac{16~\text{cm}}{D_{\text{LG,model (cm)}}}.
+    \]
+    Solve for $D_{\text{LG,model (cm)}}$, then convert:
+    \[
+        D_{\text{LG,model (m)}} = \frac{D_{\text{LG,model (cm)}}}{100}.
+    \]
 \end{enumerate}
 
 \bigskip
+%%%%%%%%%%%% CHAPTER 1 PROBLEM 4 %%%%%%%%%%%%%%%%
 \hrule
-\bigskip 
-
-\paragraph*{\bf Problem 4 - Rod's and Cross Section's}
-\smallskip
-
-\paragraph{A thin rod extends from $ x = 0 $ to $x = 16.0 cm $. It has a cross-sectional area A = 8.50 $cm^{2}$,and its density increases uniformly in the positive x-direction from 3.00 $\frac{g}{cm^{3}}$ at one endpoint to 19.0 $\frac{g}{cm^{3}}$ at the other.}
+\paragraph*{\bf Problem 4 -- Rods \& Cross Sections}
 \medskip
 
-\paragraph{Note the $\rho$ at the start and the end of x (i.e $\rho$ at x = 0 and $\rho$ at x = xx cm )}
-\bigskip
+\paragraph{\bf Mass of a Rod with Linearly Varying Density}
+\smallskip
+
+A thin rod extends from $x = 0$ to $x = \SI{16.0}{cm}$.  
+Cross-sectional area $A = \SI{8.50}{cm^2}$.  
+Density increases linearly from $\rho(0) = \SI{3.00}{g/cm^3}$ to $\rho(16~\text{cm}) = \SI{19.0}{g/cm^3}$.
+
+Assume
+\[
+    \rho(x) = B + Cx,
+\]
+with $x$ in cm.
 
 \begin{enumerate}[label=(\alph*)]
-    \item Solve for B by plugging in C = 0 and solve the $\rho$ function
-    
+    \item \textbf{Find $B$ from $\rho(0)$}
+    \[
+        \rho(0) = B \quad\Rightarrow\quad B = \SI{3.00}{g/cm^3}.
+    \]
 
-\begin{align*}
-    \rho(0) = B + C(0) \rightarrow B = 3.00 cm^{3}
-\end{align*}
-    
-    \item To find the C, you need to plug in x = 16cm into the $\rho$ function and solve
+    \item \textbf{Find $C$ from $\rho(16~\text{cm})$}
+    \[
+        \rho(16) = B + C(16) = \SI{19.0}{g/cm^3}.
+    \]
+    So
+    \[
+        19.0 = 3.00 + 16C \quad\Rightarrow\quad C = \frac{19.0 - 3.0}{16} = \SI{1.00}{g/cm^4}.
+    \]
 
-\begin{align*}
-    \rho(x\,=\,16\,cm) = B + C(x\,=\,16\,cm)
-\end{align*}
+    \item \textbf{Total mass of the rod}
 
-\begin{align*}
-    19.0\,\frac{g}{cm^3}\, = 3.00 \frac{g}{cm^{3}} + 16C
-\end{align*}
-
-\begin{align*}
-    C = 1.00\frac{g}{cm^{4}}
-\end{align*}
-
-    \item To find the \textbf{total mass}, this requires us to integrate over the whole $\rho$ function
-
-\begin{align*}
-    \int_{0}^{16}(B\,+\,Cx)(8.50cm^{2}) \cdot dx
-\end{align*}
-
-\begin{align*}
-    (8.50cm^{2}) \int_{0}^{16}(Bx\,+\,\frac{Cx^{2}}{2})
-\end{align*}
-
-\begin{align*}
-    (8.50cm^{2}) \int_{0}^{16}((3.00)x\,+\,\frac{(1.00)x^{2}}{2})
-\end{align*}
-
-\begin{align*}
-    (8.50cm^{2}) \int_{0}^{16}((3.00)(16.00)\,+\,\frac{(1.00)(16.00)^{2}}{2})
-\end{align*}
-
-\begin{align*}
-    (8.50cm^{2}) \int_{0}^{16}(48\,+128)
-\end{align*}
-
-\begin{align*}
-    (8.50cm^{2})(176)\rightarrow\,1496\,g
-\end{align*}
-
-\begin{align*}
-    1496 g \frac{1 kg}{1000 g} \, = 1.496\,kg
-\end{align*}
-
+    Mass $m$ is
+    \[
+        m = \int_0^{16} \rho(x) A\,dx
+          = A \int_0^{16} \left(B + Cx\right)\,dx.
+    \]
+    Compute:
+    \begin{align*}
+        m &= A \left[ Bx + \frac{C x^2}{2} \right]_0^{16} \\
+          &= (\SI{8.50}{cm^2})\left[ (3.00)(16) + \frac{1.00(16)^2}{2} \right] \\
+          &= 8.50\,(48 + 128)~\si{g} \\
+          &= 8.50 \times 176~\si{g} \approx 1496~\si{g}.
+    \end{align*}
+    Convert to kilograms:
+    \[
+        m \approx 1.496~\si{kg}.
+    \]
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%% CHAPTER 2 QUIZ SECTION %%%%%%%%%%%%%%%%%%
 
 \hrule
 \bigskip
-\text{\large \bf Chapter 2 Quiz Problems } 
-\paragraph*{\bf Problem 2 - Constant Speed}
+\paragraph{\large \bf Chapter 2 Quiz Problems } 
+\bigskip
+
+%%%%%%%%%%%% CHAPTER 2 PROBLEM 2 %%%%%%%%%%%%%%%%
+\paragraph*{\bf Problem 2 -- Constant Speed Motion}
+\smallskip
+
+\paragraph{\bf Position and Velocity for Motion at Constant Speed}
+\smallskip
+
+For a particle moving at constant speed $v$ along a straight line:
 
 \begin{enumerate}[label=(\alph*)]
-    \item Given \textbf{Cartesian}
+    \item \textbf{1D motion (along $x$-axis)}
+    \[
+        x(t) = x_0 + vt,
+    \]
+    where $v$ is positive (right) or negative (left).  
+    Average speed and instantaneous speed are both $\lvert v \rvert$.
 
-\begin{align*}
-    x = rcos(\theta) \,\,\,\, y = rsin(\theta)
-\end{align*}
-    
-    \item Given \textbf{Polar}
+    \item \textbf{2D motion at constant speed}
 
-\begin{align*}
-    \rho(x\,=\,16\,cm) = B + C(x\,=\,16\,cm)
-\end{align*}
-
-\begin{align*}
-    19.0\,\frac{g}{cm^3}\, = 3.00 \frac{g}{cm^{3}} + 16C
-\end{align*}
-
-\begin{align*}
-    C = 1.00\frac{g}{cm^{4}}
-\end{align*}
-
-    \item To find the \textbf{total mass}, this requires us to integrate over the whole $\rho$ function
-
-\begin{align*}
-    \int_{0}^{16}(B\,+\,Cx)(8.50cm^{2}) \cdot dx
-\end{align*}
-
-\begin{align*}
-    (8.50cm^{2}) \int_{0}^{16}(Bx\,+\,\frac{Cx^{2}}{2})
-\end{align*}
-
-\begin{align*}
-    (8.50cm^{2}) \int_{0}^{16}((3.00)x\,+\,\frac{(1.00)x^{2}}{2})
-\end{align*}
-
-\begin{align*}
-    (8.50cm^{2}) \int_{0}^{16}((3.00)(16.00)\,+\,\frac{(1.00)(16.00)^{2}}{2})
-\end{align*}
-
-\begin{align*}
-    (8.50cm^{2}) \int_{0}^{16}(48\,+128)
-\end{align*}
-
-\begin{align*}
-    (8.50cm^{2})(176)\rightarrow\,1496\,g
-\end{align*}
-
-\begin{align*}
-    1496 g \frac{1 kg}{1000 g} \, = 1.496\,kg
-\end{align*}
-
+    If direction is given by angle $\theta$ from the $+x$ axis:
+    \begin{align*}
+        v_x &= v\cos\theta, \\
+        v_y &= v\sin\theta, \\
+        x(t) &= x_0 + v_x t, \\
+        y(t) &= y_0 + v_y t.
+    \end{align*}
 \end{enumerate}
 
-\paragraph*{\bf Problem 15 - Hellicopters \& Heights}
 \bigskip
+%%%%%%%%%%%% CHAPTER 2 PROBLEM 15 %%%%%%%%%%%%%%%%
+\paragraph*{\bf Problem 15 -- Helicopters \& Heights}
+\smallskip
+
+\paragraph{\bf Vertical Motion: Position vs. Time}
+\smallskip
+
+A helicopter's height above the ground can be modeled in 1D (vertical $y$-axis):
+
 \begin{enumerate}[label=(\alph*)]
-    \item Given \textbf{Cartesian}
+    \item \textbf{Constant vertical speed}
+    \[
+        y(t) = y_0 + v_y t,
+    \]
+    where $v_y$ is positive when ascending and negative when descending.
 
-\begin{align*}
-    x = rcos(\theta) \,\,\,\, y = rsin(\theta)
-\end{align*}
-    
-    \item Given \textbf{Polar}
-
-\begin{align*}
-    \rho(x\,=\,16\,cm) = B + C(x\,=\,16\,cm)
-\end{align*}
-
-\begin{align*}
-    19.0\,\frac{g}{cm^3}\, = 3.00 \frac{g}{cm^{3}} + 16C
-\end{align*}
-
-\begin{align*}
-    C = 1.00\frac{g}{cm^{4}}
-\end{align*}
-
-    \item To find the \textbf{total mass}, this requires us to integrate over the whole $\rho$ function
-
-\begin{align*}
-    \int_{0}^{16}(B\,+\,Cx)(8.50cm^{2}) \cdot dx
-\end{align*}
-
-\begin{align*}
-    (8.50cm^{2}) \int_{0}^{16}(Bx\,+\,\frac{Cx^{2}}{2})
-\end{align*}
-
-\begin{align*}
-    (8.50cm^{2}) \int_{0}^{16}((3.00)x\,+\,\frac{(1.00)x^{2}}{2})
-\end{align*}
-
-\begin{align*}
-    (8.50cm^{2}) \int_{0}^{16}((3.00)(16.00)\,+\,\frac{(1.00)(16.00)^{2}}{2})
-\end{align*}
-
-\begin{align*}
-    (8.50cm^{2}) \int_{0}^{16}(48\,+128)
-\end{align*}
-
-\begin{align*}
-    (8.50cm^{2})(176)\rightarrow\,1496\,g
-\end{align*}
-
-\begin{align*}
-    1496 g \frac{1 kg}{1000 g} \, = 1.496\,kg
-\end{align*}
-
+    \item \textbf{With constant vertical acceleration (e.g., gravity)}
+    \[
+        y(t) = y_0 + v_{0y} t + \frac{1}{2} a_y t^2,
+    \]
+    with
+    \[
+        v_y(t) = v_{0y} + a_y t.
+    \]
+    Use these to find time, height, or velocity when the helicopter passes a certain point or reaches a specified altitude.
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%% CHAPTER 3 QUIZ SECTION %%%%%%%%%%%%%%%%%%
@@ -269,95 +220,85 @@ From here, solve the proportion for x and take from cm $\rightarrow$ m, where $ 
 \bigskip
 \hrule
 \bigskip
-\paragraph*{\bf Problem 1, 2, \& 3 - Polar $\rightarrow$ Cartesian \& Back}
+
+%%%%%%%%%%%% CHAPTER 3 PROBLEMS 1–3 %%%%%%%%%%%%%%%%
+\paragraph*{\bf Problems 1, 2, \& 3 -- Polar $\leftrightarrow$ Cartesian Coordinates}
 \smallskip
 
-\paragraph{converting to cartesian to polar}
+\paragraph{\bf Converting Between Polar and Cartesian in 2D}
 \smallskip
 
 \begin{enumerate}[label=(\alph*)]
-    \item Given \textbf{Polar}, where $r =$ xx $cm$ and cos = $\theta$
+    \item \textbf{Given polar coordinates $(r,\theta)$}
 
-\begin{align*}
-    x = rcos(\theta) \,\,\,\, y = rsin(\theta)
-\end{align*}
-    
-    \item Given \textbf{Partial Cartesian}, where $ x $ or $y$ $=$ xx in $m$ and $ y = $ xx in degrees $\theta$
+    For a point with radius $r$ and angle $\theta$ (measured from the $+x$ axis):
+    \[
+        x = r\cos\theta, \qquad y = r\sin\theta.
+    \]
 
-\begin{align*}
-    x = rcos(\theta) \rightarrow (3.00m) = r\cdot \cos(\ang{45})
-\end{align*}
+    \item \textbf{Given partial Cartesian information}
 
-    \item Solve for r and then use r and the angle to solve for y
+    If you know $x$ and $\theta$:
+    \[
+        x = r\cos\theta \quad\Rightarrow\quad r = \frac{x}{\cos\theta}.
+    \]
+    Then
+    \[
+        y = r\sin\theta = \frac{x}{\cos\theta}\sin\theta
+          = x\tan\theta.
+    \]
 
-\begin{align*}
-    r = \frac{3.00m}{\cos (\ang{45})}
-\end{align*}
+    \item \textbf{Going from Cartesian to polar}
 
-\begin{align*}
-    y = r\cdot\sin(\ang{45}) \,\,\,OR \,\,\, y = \frac{x}{\tan(\ang{45})}
-\end{align*}
-
+    If $x$ and $y$ are known:
+    \[
+        r = \sqrt{x^2 + y^2}, \qquad \theta = \tan^{-1}\!\left(\frac{y}{x}\right)
+    \]
+    (adjust $\theta$ based on the quadrant).
 \end{enumerate}
 
-
 \bigskip
-\paragraph*{\bf Problem 4 - Forces and Boxes}
-\bigskip
-
-\paragraph{\bf Vector Addition of Two Forces On a Box}
+%%%%%%%%%%%% CHAPTER 3 PROBLEM 4 %%%%%%%%%%%%%%%%
+\paragraph*{\bf Problem 4 -- Forces and Boxes}
 \smallskip
 
-\bigskip
+\paragraph{\bf Vector Addition of Two Forces on a Box}
+\smallskip
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.35\linewidth]{/Users/aspenjohnson/Documents/GitHub/academics-fall-2025/PHY2048_GeneralPhysicsI/figures/Chapter3_ForcesAndBoxes.png}
-    \caption{Forces $\vec{F_1}$ and $\vec{F_2}$ acting on a box at an angle $\theta$}
+    \caption{Forces $\vec{F}_1$ and $\vec{F}_2$ acting on a box at angle(s) $\theta_1$, $\theta_2$.}
     \label{fig:TwoStringTwoForces}
 \end{figure}
 
+Let $\vec{F}_1$ have magnitude $F_1$ and angle $\theta_1$ from the $+x$ axis.  
+Let $\vec{F}_2$ be vertical (for example), or at angle $\theta_2$.
+
 \begin{enumerate}[label=(\alph*)]
-    \item Given $\vec{F_1}$ and $\vec{F_2}$ both have magnitudes of $\vec{F_1}$ and $\vec{F_2}$ as well as an angle $\theta$, we can\textbf{ resolve each vector into it's components}
+    \item \textbf{Resolve each force into components}
+    \begin{align*}
+        F_{1x} &= F_1 \cos\theta_1, &
+        F_{1y} &= F_1 \sin\theta_1, \\
+        F_{2x} &= F_2 \cos\theta_2, &
+        F_{2y} &= F_2 \sin\theta_2.
+    \end{align*}
+    (If $\vec{F}_2$ is purely vertical, then $F_{2x} = 0$ and $F_{2y} = F_2$.)
 
-\begin{align*}
-    \vec{F_x}=F\cdot \cos(\theta)\,\,\,and\,\,\, \vec{F_y}=F\cdot \sin(\theta) 
-\end{align*}
-    
-\begin{align*}
-    \vec{F}_{1x}=F_{1}\cdot \cos(\theta_{1})\,\,\, and \,\,\, \vec{F}_{1y}=F_{1}\cdot \sin(\theta_{1})
-\end{align*}
-  
+    \item \textbf{Resultant force components}
+    \begin{align*}
+        F_{Rx} &= F_{1x} + F_{2x}, \\
+        F_{Ry} &= F_{1y} + F_{2y}.
+    \end{align*}
 
-\begin{align*}
-    \vec{F}_{2x}=0 \,\,\, and \,\,\, \vec{F}_{2y}=F_{2}
-\end{align*}
-
-    \item Therefore we can calculate the \textbf{resultant vector, magnitude}, as well as \textbf{angle}
-\begin{align*}
-    F_{Rx}=F_{1x}+F_{2x}
-\end{align*}
-
-\begin{align*}
-    F_{Ry}=F_{1y}+F_{2y}
-\end{align*}
-
-
-\begin{align*}
-    F_{R}=\sqrt{F^{2}_Rx+F^{2}_Ry}
-\end{align*}
-
-\begin{align*}
-    \theta_R = \tan^-1(\frac{F_Ry}{F_Rx})
-\end{align*}
-
-%%%%%%%%%%%%% COME BCK TO WRITE OUT A SIMPLE EXAMPLE %%%%%%%%%%%%%
-
-\begin{align*}
-    y = r\cdot\sin(\ang{45}) \,\,\,OR \,\,\, y = \frac{x}{\tan(\ang{45})}
-\end{align*}
-
+    \item \textbf{Magnitude and direction of resultant}
+    \begin{align*}
+        F_R &= \sqrt{F_{Rx}^2 + F_{Ry}^2}, \\
+        \theta_R &= \tan^{-1}\!\left(\frac{F_{Ry}}{F_{Rx}}\right)
+    \end{align*}
+    (again, adjust $\theta_R$ based on the quadrant of $\vec{F}_R$).
 \end{enumerate}
+
 %%%%%%%%%%%%%%%%% CHAPTER 5 QUIZ SECTION %%%%%%%%%%%%%%%%%%
 
 \bigskip
@@ -365,436 +306,665 @@ From here, solve the proportion for x and take from cm $\rightarrow$ m, where $ 
 \bigskip
 \hrule
 \bigskip
-\paragraph*{\bf Problem 1 - Resultant Forces \& More Magnitudes }
+
+%%%%%%%%%%%% CHAPTER 5 PROBLEM 1 %%%%%%%%%%%%%%%%
+\paragraph*{\bf Problem 1 -- Resultant Forces \& Magnitudes}
 \smallskip
 
-\paragraph{converting to cartesian to polar}
+\paragraph{\bf From Cartesian Components to Magnitude (and Direction)}
 \smallskip
+
+Given a mass $m$ and acceleration
+\[
+\vec{a} = a_x \hat{i} + a_y \hat{j},
+\]
+the net force is
+\[
+\vec{F} = m \vec{a} = (m a_x)\hat{i} + (m a_y)\hat{j}.
+\]
 
 \begin{enumerate}[label=(\alph*)]
-    \item Given \textbf{Polar}, where $r =$ xx $cm$ and cos = $\theta$
+    \item \textbf{Find components of $\vec{F}$}
+    \[
+        F_x = m a_x, \qquad F_y = m a_y.
+    \]
 
-\begin{align*}
-    x = rcos(\theta) \,\,\,\, y = rsin(\theta)
-\end{align*}
-    
-    \item Given \textbf{Partial Cartesian}, where $ x $ or $y$ $=$ xx in $m$ and $ y = $ xx in degrees $\theta$
+    \item \textbf{Magnitude of the force}
+    \[
+        \lvert \vec{F} \rvert = \sqrt{F_x^2 + F_y^2}.
+    \]
 
-\begin{align*}
-    x = rcos(\theta) \rightarrow (3.00m) = r\cdot \cos(\ang{45})
-\end{align*}
-
-    \item Solve for r and then use r and the angle to solve for y
-
-\begin{align*}
-    r = \frac{3.00m}{\cos (\ang{45})}
-\end{align*}
-
-\begin{align*}
-    y = r\cdot\sin(\ang{45}) \,\,\,OR \,\,\, y = \frac{x}{\tan(\ang{45})}
-\end{align*}
-
+    \item (Optional) \textbf{Direction (angle from $+x$ axis)}
+    \[
+        \theta = \tan^{-1}\!\left(\frac{F_y}{F_x}\right).
+    \]
 \end{enumerate}
 
-
 \bigskip
-\paragraph*{\bf Problem 2 - Normal Forces By Ground On Seemingly Normal Boxes }
+%%%%%%%%%%%% CHAPTER 5 PROBLEM 2 %%%%%%%%%%%%%%%%
+\paragraph*{\bf Problem 2 -- Normal Force on a Box with Hanging Weights}
 \smallskip
 
-\paragraph{\bf Vector Addition of Two Forces On a Box}
+\paragraph{\bf Vector Addition of Two Vertical Forces on a Box}
 \smallskip
 
-\bigskip
-
-
+Let the box weight be $W_{\text{box}}$ and the upward tension from the hanging mass be $T$. Taking up as positive, the normal force $F_N$ satisfies:
+\[
+F_N + T - W_{\text{box}} = 0 \quad\Rightarrow\quad F_N = W_{\text{box}} - T.
+\]
 
 \begin{enumerate}[label=(\alph*)]
-    \item Given $\vec{F_1}$ and $\vec{F_2}$ both have magnitudes of $\vec{F_1}$ and $\vec{F_2}$ as well as an angle $\theta$, we can\textbf{ resolve each vector into it's components}
+    \item \textbf{Case A: Box on the ground, no cord attached}
+    \[
+        F_N = W_{\text{box}} = \SI{15.5}{lb}
+    \]
+    (normal force equals the weight).
 
-\begin{align*}
-    \vec{F_x}=F\cdot \cos(\theta)\,\,\,and\,\,\, \vec{F_y}=F\cdot \sin(\theta) 
-\end{align*}
-    
-\begin{align*}
-    \vec{F}_{1x}=F_{1}\cdot \cos(\theta_{1})\,\,\, and \,\,\, \vec{F}_{1y}=F_{1}\cdot \sin(\theta_{1})
-\end{align*}
-  
+    \item \textbf{Case B: Hanging weight smaller than box weight}
+    \[
+        F_N = W_{\text{box}} - W_{\text{hang}}.
+    \]
+    The cord \emph{reduces} the load on the floor but cannot lift the box.
 
-\begin{align*}
-    \vec{F}_{2x}=0 \,\,\, and \,\,\, \vec{F}_{2y}=F_{2}
-\end{align*}
-
-    \item Therefore we can calculate the \textbf{resultant vector, magnitude}, as well as \textbf{angle}
-\begin{align*}
-    F_{Rx}=F_{1x}+F_{2x}
-\end{align*}
-
-\begin{align*}
-    F_{Ry}=F_{1y}+F_{2y}
-\end{align*}
+    \item \textbf{Case C: Hanging weight larger than box weight}
+    \[
+        W_{\text{hang}} > W_{\text{box}} \quad\Rightarrow\quad F_N = 0
+    \]
+    (the box is lifted off the floor, so the floor exerts no force).
 \end{enumerate}
 
-\begin{align*}
-    F_{R}=\sqrt{F^{2}_Rx+F^{2}_Ry}
-\end{align*}
-
-\begin{align*}
-    \theta_R = \tan^-1(\frac{F_Ry}{F_Rx})
-\end{align*}
-
 \bigskip
-\paragraph*{\bf Problem 3 - Sailboats \& Constant Velocities}
+%%%%%%%%%%%% CHAPTER 5 PROBLEM 3 %%%%%%%%%%%%%%%%
+\paragraph*{\bf Problem 3 -- Sailboats \& Constant Velocity}
+\smallskip
 
-
-
-
-\paragraph{\bf Vector Addition of Two Forces On a Box}
+\paragraph{\bf Constant Velocity $\Rightarrow$ Net Force is Zero}
 \smallskip
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.35\linewidth]{/Users/aspenjohnson/Documents/GitHub/academics-fall-2025/PHY2048_GeneralPhysicsI/figures/Chapter5_SailboatsAndForces.png}
-    \caption{Sailboat being pulled by Forces $\vec{F}, \vec{n},\,and \,\vec{P}$}
+    \caption{Sailboat being pulled by forces $\vec{F}$, $\vec{n}$, and $\vec{P}$.}
     \label{fig:SailboatForces}
 \end{figure}
 
-\bigskip
+For constant velocity,
+\[
+\sum \vec{F} = \vec{0}.
+\]
 
-
+Given a drag force
+\[
+\vec{F} = F_x \hat{i} + F_y \hat{j},
+\]
+and two other forces $\vec{n}$ and $\vec{P}$, we require
+\[
+\vec{F} + \vec{n} + \vec{P} = \vec{0}.
+\]
 
 \begin{enumerate}[label=(\alph*)]
-    \item Given $\vec{F_1}$ and $\vec{F_2}$ both have magnitudes of $\vec{F_1}$ and $\vec{F_2}$ as well as an angle $\theta$, we can\textbf{ resolve each vector into it's components}
+    \item \textbf{Resolve the known force $\vec{F}$ into components}
+    \[
+        F_x = F\cos\theta, \qquad F_y = F\sin\theta
+    \]
+    (signs depend on the direction of $\vec{F}$).
 
-\begin{align*}
-    \vec{F_x}=F\cdot \cos(\theta)\,\,\,and\,\,\, \vec{F_y}=F\cdot \sin(\theta) 
-\end{align*}
-    
-\begin{align*}
-    \vec{F}_{1x}=F_{1}\cdot \cos(\theta_{1})\,\,\, and \,\,\, \vec{F}_{1y}=F_{1}\cdot \sin(\theta_{1})
-\end{align*}
-  
-
-\begin{align*}
-    \vec{F}_{2x}=0 \,\,\, and \,\,\, \vec{F}_{2y}=F_{2}
-\end{align*}
-
-    \item Therefore we can calculate the \textbf{resultant vector, magnitude}, as well as \textbf{angle}
-\begin{align*}
-    F_{Rx}=F_{1x}+F_{2x}
-\end{align*}
-
-\begin{align*}
-    F_{Ry}=F_{1y}+F_{2y}
-\end{align*}
+    \item \textbf{Write component equations}
+    \[
+        F_x + n_x + P_x = 0, \qquad F_y + n_y + P_y = 0,
+    \]
+    and solve for the magnitudes of $\vec{n}$ and $\vec{P}$.
 \end{enumerate}
 
-\begin{align*}
-    F_{R}=\sqrt{F^{2}_Rx+F^{2}_Ry}
-\end{align*}
-
-\begin{align*}
-    \theta_R = \tan^-1(\frac{F_Ry}{F_Rx})
-\end{align*}
-
 \bigskip
-\paragraph*{\bf Problem 4 - Stabilizing Broken Legs}
+%%%%%%%%%%%% CHAPTER 5 PROBLEM 4 %%%%%%%%%%%%%%%%
+\paragraph*{\bf Problem 4 -- Stabilizing Broken Legs (Traction System)}
+\smallskip
 
-
-
-\paragraph{\bf Vector Addition of Two Forces On a Box}
+\paragraph{\bf Leg Traction System Tension}
 \smallskip
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.35\linewidth]{/Users/aspenjohnson/Documents/GitHub/academics-fall-2025/PHY2048_GeneralPhysicsI/figures/Chapter5_StabilizingABrokenLeg.png}
-    \caption{Sailboat being pulled by Forces $\vec{F}, \vec{n},\,and \,\vec{P}$}
-    \label{fig:myimage}
+    \caption{Leg traction system with pulleys and a hanging mass $m$.}
+    \label{fig:LegTraction}
 \end{figure}
 
-\bigskip
-
-
-
 \begin{enumerate}[label=(\alph*)]
-    \item Given $\vec{F_1}$ and $\vec{F_2}$ both have magnitudes of $\vec{F_1}$ and $\vec{F_2}$ as well as an angle $\theta$, we can\textbf{ resolve each vector into it's components}
+    \item \textbf{Tension from hanging mass}
+    \[
+        T = mg
+    \]
+    because the mass is in equilibrium and its weight is supported by the rope.
 
-\begin{align*}
-    \vec{F_x}=F\cdot \cos(\theta)\,\,\,and\,\,\, \vec{F_y}=F\cdot \sin(\theta) 
-\end{align*}
-    
-\begin{align*}
-    \vec{F}_{1x}=F_{1}\cdot \cos(\theta_{1})\,\,\, and \,\,\, \vec{F}_{1y}=F_{1}\cdot \sin(\theta_{1})
-\end{align*}
-  
-
-\begin{align*}
-    \vec{F}_{2x}=0 \,\,\, and \,\,\, \vec{F}_{2y}=F_{2}
-\end{align*}
-
-    \item Therefore we can calculate the \textbf{resultant vector, magnitude}, as well as \textbf{angle}
-\begin{align*}
-    F_{Rx}=F_{1x}+F_{2x}
-\end{align*}
-
-\begin{align*}
-    F_{Ry}=F_{1y}+F_{2y}
-\end{align*}
+    \item \textbf{Horizontal force pulling the leg}
+    If two segments of rope pull on the leg at angle $\theta$ above/below the horizontal:
+    \[
+        F_{\text{right}} = 2T\cos\theta.
+    \]
 \end{enumerate}
 
-\begin{align*}
-    F_{R}=\sqrt{F^{2}_Rx+F^{2}_Ry}
-\end{align*}
-
-\begin{align*}
-    \theta_R = \tan^-1(\frac{F_Ry}{F_Rx})
-\end{align*}
-
-\newpage
-\paragraph*{\bf Problem 5 - Speed Over Time Curves}
 \bigskip
+%%%%%%%%%%%% CHAPTER 5 PROBLEM 5 %%%%%%%%%%%%%%%%
+\paragraph*{\bf Problem 5 -- Chin-up Forces from a Velocity--Time Graph}
+\smallskip
 
-
-\paragraph{\bf Vector Addition of Two Forces On a Box}
-\medskip
+\paragraph{\bf Convert Graph Slope to Acceleration, then Use $F = m(g + a_y)$}
+\smallskip
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.35\linewidth]{/Users/aspenjohnson/Documents/GitHub/academics-fall-2025/PHY2048_GeneralPhysicsI/figures/Chapter5_SpeedOverTimeCurve.png}
-    \caption{Speed Over Time Curve}
+    \caption{Speed--time curve for the chin-up motion. Convert \si{cm/s} to \si{m/s}.}
     \label{fig:SpeedOverTime}
 \end{figure}
 
-\bigskip
-
-
-
 \begin{enumerate}[label=(\alph*)]
-    \item Given $\vec{F_1}$ and $\vec{F_2}$ both have magnitudes of $\vec{F_1}$ and $\vec{F_2}$ as well as an angle $\theta$, we can\textbf{ resolve each vector into it's components}
+    \item \textbf{Find acceleration from the slope}
+    \[
+        a_y = \frac{\Delta v_y}{\Delta t}
+    \]
+    using the velocity--time graph (convert \si{cm/s} to \si{m/s}).
 
-\begin{align*}
-    \vec{F_x}=F\cdot \cos(\theta)\,\,\,and\,\,\, \vec{F_y}=F\cdot \sin(\theta) 
-\end{align*}
-    
-\begin{align*}
-    \vec{F}_{1x}=F_{1}\cdot \cos(\theta_{1})\,\,\, and \,\,\, \vec{F}_{1y}=F_{1}\cdot \sin(\theta_{1})
-\end{align*}
-  
-
-\begin{align*}
-    \vec{F}_{2x}=0 \,\,\, and \,\,\, \vec{F}_{2y}=F_{2}
-\end{align*}
-
-    \item Therefore we can calculate the \textbf{resultant vector, magnitude}, as well as \textbf{angle}
-\begin{align*}
-    F_{Rx}=F_{1x}+F_{2x}
-\end{align*}
-
-\begin{align*}
-    F_{Ry}=F_{1y}+F_{2y}
-\end{align*}
+    \item \textbf{Force from the bar}
+    \[
+        F_{\text{bar}} = N = mg + ma_y = m(g + a_y).
+    \]
+    For $a_y = 0$ (flat part of the graph), $F_{\text{bar}} = mg$ (true bodyweight).
 \end{enumerate}
 
-\begin{align*}
-    F_{R}=\sqrt{F^{2}_Rx+F^{2}_Ry}
-\end{align*}
-
-\begin{align*}
-    \theta_R = \tan^-1(\frac{F_Ry}{F_Rx})
-\end{align*}
-
-
-\paragraph*{\bf Problem 6 - Elevators Experiencing Tension}
 \bigskip
+%%%%%%%%%%%% CHAPTER 5 PROBLEM 6 %%%%%%%%%%%%%%%%
+\paragraph*{\bf Problem 6 -- Tension in Elevator Strings}
+\smallskip
 
-
-\paragraph{\bf Vector Addition of Two Forces On a Box}
-\medskip
+\paragraph{\bf Two Masses Suspended in an Accelerating Elevator}
+\smallskip
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.30\linewidth]{/Users/aspenjohnson/Documents/GitHub/academics-fall-2025/PHY2048_GeneralPhysicsI/figures/Chapter5_ElevatorsAndTension.png}
-    \caption{Two masses, $m$ suspended in an elevator, uphel by two $T_1$ and $T_2$}
+    \caption{Two masses $m$ suspended in an elevator, held by tensions $T_1$ and $T_2$.}
     \label{fig:elevatortension}
 \end{figure}
 
-\bigskip
-
-
-
 \begin{enumerate}[label=(\alph*)]
-    \item Given $\vec{F_1}$ and $\vec{F_2}$ both have magnitudes of $\vec{F_1}$ and $\vec{F_2}$ as well as an angle $\theta$, we can\textbf{ resolve each vector into it's components}
+    \item \textbf{Lower string (tension $T_2$) supports one mass}
+    \[
+        T_2 - mg = ma \quad\Rightarrow\quad T_2 = m(g + a).
+    \]
 
-\begin{align*}
-    \vec{F_x}=F\cdot \cos(\theta)\,\,\,and\,\,\, \vec{F_y}=F\cdot \sin(\theta) 
-\end{align*}
-    
-\begin{align*}
-    \vec{F}_{1x}=F_{1}\cdot \cos(\theta_{1})\,\,\, and \,\,\, \vec{F}_{1y}=F_{1}\cdot \sin(\theta_{1})
-\end{align*}
-  
+    \item \textbf{Upper string (tension $T_1$) supports two masses}
+    \[
+        T_1 - 2mg = 2ma \quad\Rightarrow\quad T_1 = 2m(g + a).
+    \]
 
-\begin{align*}
-    \vec{F}_{2x}=0 \,\,\, and \,\,\, \vec{F}_{2y}=F_{2}
-\end{align*}
-
-    \item Therefore we can calculate the \textbf{resultant vector, magnitude}, as well as \textbf{angle}
-\begin{align*}
-    F_{Rx}=F_{1x}+F_{2x}
-\end{align*}
-
-\begin{align*}
-    F_{Ry}=F_{1y}+F_{2y}
-\end{align*}
+    \item \textbf{Max elevator acceleration} comes from setting $T_1$ or $T_2$ equal to the maximum safe tension and solving for $a$.
 \end{enumerate}
 
-\begin{align*}
-    F_{R}=\sqrt{F^{2}_Rx+F^{2}_Ry}
-\end{align*}
-
-\begin{align*}
-    \theta_R = \tan^-1(\frac{F_Ry}{F_Rx})
-\end{align*}
 %%%%%%%%%%%%%%%%% CHAPTER 6 QUIZ SECTION %%%%%%%%%%%%%%%%%%
 
-
-\bigskip
+\newpage
 \paragraph{\large \bf Chapter 6 Quiz Problems } 
 \bigskip
 \hrule
 \bigskip
-%%%%%%%%%%%% CHAPTER 6 QUESTION 1 %%%%%%%%%%%%%%%%
-\paragraph*{\bf Problem 1 -Station Rotation}
+
+%%%%%%%%%%%% CHAPTER 6 PROBLEM 1 %%%%%%%%%%%%%%%%
+\paragraph*{\bf Problem 1 -- Station Rotation}
 \smallskip
 
-\paragraph{converting to cartesian to polar}
+\paragraph{\bf Artificial Gravity in a Rotating Space Station}
 \smallskip
 
 \begin{enumerate}[label=(\alph*)]
-    \item Given \textbf{Polar}, where $r =$ xx $cm$ and cos = $\theta$
+    \item Given diameter $D = \SI{119}{m}$, radius $r = D/2 = \SI{59.5}{m}$ and desired centripetal acceleration $a_c = \SI{3.60}{m/s^2}$:
+    \begin{align*}
+        a_c &= \omega^2 r \\
+        \omega &= \sqrt{\frac{a_c}{r}} \\
+        f &= \frac{\omega}{2\pi} \quad\Rightarrow\quad
+        \text{rev/min} = 60 f \approx 2.35~\text{rev/min}.
+    \end{align*}
 
-\begin{align*}
-    x = rcos(\theta) \,\,\,\, y = rsin(\theta)
-\end{align*}
-    
-    \item Given \textbf{Partial Cartesian}, where $ x $ or $y$ $=$ xx in $m$ and $ y = $ xx in degrees $\theta$
-
-\begin{align*}
-    x = rcos(\theta) \rightarrow (3.00m) = r\cdot \cos(\ang{45})
-\end{align*}
-
-    \item Solve for r and then use r and the angle to solve for y
-
-\begin{align*}
-    r = \frac{3.00m}{\cos (\ang{45})}
-\end{align*}
-
-\begin{align*}
-    y = r\cdot\sin(\ang{45}) \,\,\,OR \,\,\, y = \frac{x}{\tan(\ang{45})}
-\end{align*}
-
+    \item For $a_c = g = \SI{9.80}{m/s^2}$ with the same radius:
+    \begin{align*}
+        \omega &= \sqrt{\frac{g}{r}}, \quad
+        f = \frac{\omega}{2\pi}, \quad
+        \text{rev/min} = 60 f \approx 3.88~\text{rev/min}.
+    \end{align*}
 \end{enumerate}
 
-%%%%%%%%%%%% CHAPTER 6 QUESTION 2 %%%%%%%%%%%%%%%%
-
 \bigskip
-\paragraph*{\bf Problem 2 - Coins on a turntable}
-\bigskip
-
-\paragraph{\bf Vector Addition of Two Forces On a Box}
+%%%%%%%%%%%% CHAPTER 6 PROBLEM 2 %%%%%%%%%%%%%%%%
+\paragraph*{\bf Problem 2 -- Coins on a Turntable}
 \smallskip
 
+\paragraph{\bf Static Friction as Centripetal Force}
+\smallskip
+
+\begin{enumerate}[label=(\alph*)]
+    \item The force providing centripetal acceleration is \textbf{static friction}:
+    \[
+        F_c = f_s = \mu_s N.
+    \]
+
+    \item Given radius $r = \SI{0.294}{m}$ and speed $v = \SI{0.484}{m/s}$:
+    \begin{align*}
+        a_c &= \frac{v^2}{r}, \\
+        \mu_s &= \frac{a_c}{g} = \frac{v^2}{rg} \approx 0.0813.
+    \end{align*}
+\end{enumerate}
+
 \bigskip
+%%%%%%%%%%%% CHAPTER 6 PROBLEM 3 %%%%%%%%%%%%%%%%
+\paragraph*{\bf Problem 3 -- Apollo Astronaut in Lunar Orbit}
+\smallskip
 
+\paragraph{\bf Circular Orbit Using $a_c = g_{\text{orbit}}$}
+\smallskip
 
+\begin{enumerate}[label=(\alph*)]
+    \item Radius of orbit:
+    \begin{align*}
+        R_{\text{Moon}} &= \SI{1.70e6}{m}, \quad h = \SI{4.43e5}{m}, \\
+        r &= R_{\text{Moon}} + h.
+    \end{align*}
+    Given $a_c = g_{\text{orbit}} = \SI{1.07}{m/s^2}$ and $a_c = v^2/r$:
+    \[
+        v = \sqrt{a_c r} \approx \SI{1.51e3}{m/s}.
+    \]
+
+    \item Orbital period:
+    \[
+        T = \frac{2\pi r}{v} \approx \SI{8.89e3}{s}.
+    \]
+\end{enumerate}
+
+\bigskip
+%%%%%%%%%%%% CHAPTER 6 PROBLEM 4 %%%%%%%%%%%%%%%%
+\paragraph*{\bf Problem 4 -- Space Station Rotation (Again)}
+\smallskip
+
+\paragraph{\bf Artificial Gravity with Different Diameter}
+\smallskip
+
+\begin{enumerate}[label=(\alph*)]
+    \item Diameter $D = \SI{138}{m}$, radius $r = \SI{69.0}{m}$, $a_c = \SI{4.00}{m/s^2}$:
+    \begin{align*}
+        a_c &= \omega^2 r \Rightarrow \omega = \sqrt{\frac{a_c}{r}} \\
+        f &= \frac{\omega}{2\pi}, \quad
+        \text{rev/min} = 60f \approx 2.30~\text{rev/min}.
+    \end{align*}
+\end{enumerate}
+
+\bigskip
+%%%%%%%%%%%% CHAPTER 6 PROBLEM 5 %%%%%%%%%%%%%%%%
+\paragraph*{\bf Problem 5 -- Stuntman on a Rope Swing}
+\smallskip
+
+\paragraph{\bf Tension at Bottom of Circular Arc}
+\smallskip
+
+\begin{enumerate}[label=(\alph*)]
+    \item Given $m = \SI{86.5}{kg}$, $L = \SI{12.0}{m}$, $v = \SI{8.60}{m/s}$, $T_{\max} = \SI{1000}{N}$.
+    At the bottom of the swing:
+    \[
+        \sum F_r = T - mg = \frac{mv^2}{L} \quad\Rightarrow\quad
+        T = mg + \frac{mv^2}{L}.
+    \]
+    Numerically, $T \approx \SI{1.38e3}{N} > \SI{1000}{N}$, so the rope \textbf{breaks} at $v = \SI{8.60}{m/s}$.
+
+    \item Maximum safe speed (set $T = T_{\max}$):
+    \begin{align*}
+        T_{\max} &= mg + \frac{mv^2}{L} \\
+        v &= \sqrt{L\left(\frac{T_{\max}}{m} - g\right)} \approx \SI{4.60}{m/s}.
+    \end{align*}
+\end{enumerate}
+
+\bigskip
+%%%%%%%%%%%% CHAPTER 6 PROBLEM 6 %%%%%%%%%%%%%%%%
+\paragraph*{\bf Problem 6 -- Hawk in Circular Flight}
+\smallskip
+
+\paragraph{\bf Centripetal and Tangential Accelerations}
+\smallskip
+
+\begin{enumerate}[label=(\alph*)]
+    \item Given $r = \SI{11.4}{m}$, $v = \SI{3.65}{m/s}$:
+    \[
+        a_c = \frac{v^2}{r} \approx \SI{1.17}{m/s^2}.
+    \]
+
+    \item With tangential acceleration $a_t = \SI{1.15}{m/s^2}$:
+    \begin{align*}
+        a &= \sqrt{a_c^2 + a_t^2} \approx \SI{1.64}{m/s^2}, \\
+        \theta &= \tan^{-1}\!\left(\frac{a_c}{a_t}\right) \approx \ang{45},
+    \end{align*}
+    where $\theta$ is measured from the direction of velocity \textbf{towards the center} of the circle.
+\end{enumerate}
+
+\bigskip
+%%%%%%%%%%%% CHAPTER 6 PROBLEM 7 %%%%%%%%%%%%%%%%
+\paragraph*{\bf Problem 7 -- Scale Reading in an Elevator}
+\smallskip
+
+\paragraph{\bf Using Two Scale Readings to Find $mg$ and $a$}
+\smallskip
+
+\begin{enumerate}[label=(\alph*)]
+    \item Let $N_{\text{start}} = \SI{600}{N}$ (starting upward), $N_{\text{stop}} = \SI{394}{N}$ (stopping):
+    \begin{align*}
+        N_{\text{start}} &= mg + ma, \\
+        N_{\text{stop}} &= mg - ma.
+    \end{align*}
+    Add:
+    \[
+        N_{\text{start}} + N_{\text{stop}} = 2mg
+        \quad\Rightarrow\quad
+        mg = \SI{497}{N}.
+    \]
+    So the person's weight is $W = \SI{497}{N}$.
+
+    \item Mass:
+    \[
+        m = \frac{W}{g} = \frac{497}{9.8} \approx \SI{50.7}{kg}.
+    \]
+
+    \item Subtract the equations to find $a$:
+    \begin{align*}
+        N_{\text{start}} - N_{\text{stop}} &= 2ma \\
+        600 - 394 &= 2ma \\
+        a &= \frac{206}{2m} \approx \SI{2.03}{m/s^2}.
+    \end{align*}
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%% CHAPTER 13 QUIZ SECTION %%%%%%%%%%%%%%%%%%
 
-
-\bigskip
+\newpage
 \paragraph{\large \bf Chapter 13 Quiz Problems } 
 \bigskip
 \hrule
 \bigskip
-\paragraph*{\bf Problem 1, 2, \& 3 - Polar $\rightarrow$ Cartesian \& Back}
+
+%%%%%%%%%%%% CHAPTER 13 PROBLEM 1 %%%%%%%%%%%%%%%%
+\paragraph*{\bf Problem 1 -- Gravitational Attraction Between Two Ships}
 \smallskip
 
-\paragraph{converting to cartesian to polar}
+\paragraph{\bf Using Newton's Law of Gravitation to Find Acceleration}
 \smallskip
+
+Two ships of equal mass $m = 4.0\times 10^7~\si{kg}$ are separated by $r = \SI{105}{m}$.
 
 \begin{enumerate}[label=(\alph*)]
-    \item Given \textbf{Polar}, where $r =$ xx $cm$ and cos = $\theta$
+    \item Gravitational force:
+    \[
+        F = G\frac{m^2}{r^2}.
+    \]
 
-\begin{align*}
-    x = rcos(\theta) \,\,\,\, y = rsin(\theta)
-\end{align*}
-    
-    \item Given \textbf{Partial Cartesian}, where $ x $ or $y$ $=$ xx in $m$ and $ y = $ xx in degrees $\theta$
-
-\begin{align*}
-    x = rcos(\theta) \rightarrow (3.00m) = r\cdot \cos(\ang{45})
-\end{align*}
-
-    \item Solve for r and then use r and the angle to solve for y
-
-\begin{align*}
-    r = \frac{3.00m}{\cos (\ang{45})}
-\end{align*}
-
-\begin{align*}
-    y = r\cdot\sin(\ang{45}) \,\,\,OR \,\,\, y = \frac{x}{\tan(\ang{45})}
-\end{align*}
-
+    \item Acceleration of either ship:
+    \[
+        a = \frac{F}{m} = G\frac{m}{r^2} \approx 2.45\times 10^{-7}~\si{m/s^2}.
+    \]
 \end{enumerate}
 
-
 \bigskip
-\paragraph*{\bf Problem 4 - Forces and Boxes}
-\bigskip
-
-\paragraph{\bf Vector Addition of Two Forces On a Box}
+%%%%%%%%%%%% CHAPTER 13 PROBLEM 2 %%%%%%%%%%%%%%%%
+\paragraph*{\bf Problem 2 -- Mass of Jupiter from Europa's Orbit}
 \smallskip
 
-\bigskip
+\paragraph{\bf Using Circular Orbit Data to Find Planet Mass}
+\smallskip
 
+Europa:
+\[
+r = 6.70\times 10^5~\si{km} = 6.70\times 10^8~\si{m}, \qquad
+T = 3.55~\text{days} = 3.55\times 86400~\si{s}.
+\]
+
+For a circular orbit,
+\[
+\frac{GM_J}{r^2} = \frac{v^2}{r}, \qquad v = \frac{2\pi r}{T}.
+\]
 
 \begin{enumerate}[label=(\alph*)]
-    \item Given $\vec{F_1}$ and $\vec{F_2}$ both have magnitudes of $\vec{F_1}$ and $\vec{F_2}$ as well as an angle $\theta$, we can\textbf{ resolve each vector into it's components}
-
-\begin{align*}
-    \vec{F_x}=F\cdot \cos(\theta)\,\,\,and\,\,\, \vec{F_y}=F\cdot \sin(\theta) 
-\end{align*}
-    
-\begin{align*}
-    \vec{F}_{1x}=F_{1}\cdot \cos(\theta_{1})\,\,\, and \,\,\, \vec{F}_{1y}=F_{1}\cdot \sin(\theta_{1})
-\end{align*}
-  
-
-\begin{align*}
-    \vec{F}_{2x}=0 \,\,\, and \,\,\, \vec{F}_{2y}=F_{2}
-\end{align*}
-
-    \item Therefore we can calculate the \textbf{resultant vector, magnitude}, as well as \textbf{angle}
-\begin{align*}
-    F_{Rx}=F_{1x}+F_{2x}
-\end{align*}
-
-\begin{align*}
-    F_{Ry}=F_{1y}+F_{2y}
-\end{align*}
-
-
-\begin{align*}
-    F_{R}=\sqrt{F^{2}_Rx+F^{2}_Ry}
-\end{align*}
-
-\begin{align*}
-    \theta_R = \tan^-1(\frac{F_Ry}{F_Rx})
-\end{align*}
-
+    \item Combine to solve for Jupiter's mass:
+    \[
+        M_J = \frac{4\pi^2 r^3}{G T^2} \approx 1.90\times 10^{27}~\si{kg}.
+    \]
 \end{enumerate}
 
+\bigskip
+%%%%%%%%%%%% CHAPTER 13 PROBLEM 3 %%%%%%%%%%%%%%%%
+\paragraph*{\bf Problem 3 -- Work Done on a Meteor by Moon's Gravity}
+\smallskip
 
+\paragraph{\bf Change in Gravitational Potential from Infinity to Surface}
+\smallskip
 
+Meteor of mass $m = \SI{1075}{kg}$ falls from rest at infinity to the Moon's surface.
 
+Moon:
+\[
+M_M = 7.35\times 10^{22}~\si{kg}, \quad R_M = 1.70\times 10^6~\si{m}.
+\]
+
+\begin{enumerate}[label=(\alph*)]
+    \item Gravitational potential energy:
+    \[
+        U = -\frac{GM_M m}{r}.
+    \]
+    From $r = \infty$ to $r = R_M$:
+    \[
+        \Delta U = U_{\text{final}} - U_{\text{initial}}
+        = -\frac{GM_M m}{R_M} - 0.
+    \]
+
+    \item Work done by gravity (on the meteor):
+    \[
+        W = -\Delta U = \frac{GM_M m}{R_M} \approx 3.10\times 10^{9}~\si{J}.
+    \]
+\end{enumerate}
+
+\bigskip
+%%%%%%%%%%%% CHAPTER 13 PROBLEM 4 %%%%%%%%%%%%%%%%
+\paragraph*{\bf Problem 4 -- Energy to Raise a Mass to Altitude $2R_E$}
+\smallskip
+
+\paragraph{\bf Gravitational Potential Energy in the $-GMm/r$ Form}
+\smallskip
+
+Move $m = \SI{900}{kg}$ from Earth's surface ($r_1 = R_E$) to altitude $2R_E$, so $r_2 = 3R_E$.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Gravitational potential:
+    \[
+        U = -\frac{GM_E m}{r}.
+    \]
+    Energy required:
+    \begin{align*}
+        \Delta E &= U_2 - U_1 \\
+                 &= -\frac{GM_E m}{3R_E} -\left(-\frac{GM_E m}{R_E}\right) \\
+                 &= GM_E m\left(\frac{1}{R_E} - \frac{1}{3R_E}\right)
+                  = GM_E m\left(\frac{2}{3R_E}\right) \\
+                 &\approx 3.75\times 10^{10}~\si{J}.
+    \end{align*}
+\end{enumerate}
+
+\bigskip
+%%%%%%%%%%%% CHAPTER 13 PROBLEM 5 %%%%%%%%%%%%%%%%
+\paragraph*{\bf Problem 5 -- Orbital Period Where $g_{\text{orbit}} = 4.42~\si{m/s^2}$}
+\smallskip
+
+\paragraph{\bf Using $g_{\text{orbit}}$ as the Centripetal Acceleration}
+\smallskip
+
+At the satellite's orbit,
+\[
+a_c = g_{\text{orbit}} = \frac{v^2}{r}, \qquad v = \frac{2\pi r}{T}.
+\]
+
+Combine to get:
+\[
+g_{\text{orbit}} = \frac{4\pi^2 r}{T^2}
+\quad\Rightarrow\quad
+T = 2\pi\sqrt{\frac{r}{g_{\text{orbit}}}} \approx 153~\text{min}.
+\]
+
+\bigskip
+%%%%%%%%%%%% CHAPTER 13 PROBLEM 6 %%%%%%%%%%%%%%%%
+\paragraph*{\bf Problem 6 -- Raising a Satellite from 97 km to 209 km}
+\smallskip
+
+\paragraph{\bf Total, Kinetic, and Potential Energy Changes in Orbit}
+\smallskip
+
+Satellite mass $m = \SI{985}{kg}$.
+
+Earth radii:
+\[
+r_1 = R_E + \SI{97e3}{m}, \qquad
+r_2 = R_E + \SI{209e3}{m}.
+\]
+
+Total orbital energy:
+\[
+E = -\frac{GM_E m}{2r}.
+\]
+
+\begin{enumerate}[label=(\alph*)]
+    \item \textbf{Total energy change}
+    \[
+        \Delta E = E_2 - E_1
+        = -\frac{GM_E m}{2}\left(\frac{1}{r_2} - \frac{1}{r_1}\right)
+        \approx 5.16\times 10^{8}~\si{J}
+        \approx 5.16\times 10^{2}~\si{MJ}.
+    \]
+
+    \item \textbf{Kinetic energy change}
+    \[
+        K = +\frac{GM_E m}{2r} \quad\Rightarrow\quad
+        \Delta K = K_2 - K_1 \approx -5.16\times 10^{8}~\si{J}
+        \approx -5.16\times 10^{2}~\si{MJ}.
+    \]
+
+    \item \textbf{Potential energy change}
+    \[
+        U = -\frac{GM_E m}{r}, \qquad
+        \Delta U = U_2 - U_1 \approx 1.03\times 10^{9}~\si{J}
+        \approx 1.03\times 10^{3}~\si{MJ}.
+    \]
+\end{enumerate}
+
+\bigskip
+%%%%%%%%%%%% CHAPTER 13 PROBLEM 7 %%%%%%%%%%%%%%%%
+\paragraph*{\bf Problem 7 -- Satellite at Altitude $2.08\times 10^6$ m}
+\smallskip
+
+\paragraph{\bf Circular Orbit: Period, Speed, and Acceleration}
+\smallskip
+
+Altitude:
+\[
+h = 2.08\times 10^6~\si{m}, \qquad
+r = R_E + h.
+\]
+
+\begin{enumerate}[label=(\alph*)]
+    \item \textbf{Period}
+    \[
+        T = 2\pi\sqrt{\frac{r^3}{GM_E}} \approx 2.15~\text{h}.
+    \]
+
+    \item \textbf{Speed}
+    \[
+        v = \sqrt{\frac{GM_E}{r}} \approx 6.86~\si{km/s}.
+    \]
+
+    \item \textbf{Acceleration}
+    \[
+        a = \frac{v^2}{r} = \frac{GM_E}{r^2} \approx 5.58~\si{m/s^2}
+    \]
+    directed toward the center of the Earth.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%% CONSTANTS \& KEY EQUATIONS %%%%%%%%%%%%%%%%%%
+
+\newpage
+\paragraph{\large \bf Key Constants and Equations (with Uses)} 
+\bigskip
+\hrule
+\bigskip
+
+\paragraph*{\bf Physical Constants (approximate)}
+\smallskip
+\begin{align*}
+    g &\approx \SI{9.80}{m/s^2} & \text{(surface gravity on Earth)} \\
+    G &\approx 6.67\times 10^{-11}~\si{N\,m^2/kg^2} & \text{(universal gravitational constant)} \\
+    R_E &\approx 6.37\times 10^6~\si{m} & \text{(radius of Earth)} \\
+    M_E &\approx 5.97\times 10^{24}~\si{kg} & \text{(mass of Earth)} \\
+    R_M &\approx 1.70\times 10^6~\si{m} & \text{(radius of Moon)} \\
+    M_M &\approx 7.35\times 10^{22}~\si{kg} & \text{(mass of Moon)} \\
+\end{align*}
+
+\bigskip
+\paragraph*{\bf Newton's Laws and Basic Dynamics}
+\smallskip
+\begin{align*}
+    \vec{F}_{\text{net}} &= m\vec{a} 
+    & \text{(Newton's 2nd law; relate net force and acceleration)} \\
+    W &= mg 
+    & \text{(weight near Earth's surface)} \\
+    N &= mg \pm ma 
+    & \text{(apparent weight / scale reading in an elevator)} \\
+    T &= mg + \frac{mv^2}{r} 
+    & \text{(tension at bottom of a vertical circular arc)} \\
+\end{align*}
+
+\bigskip
+\paragraph*{\bf Circular Motion}
+\smallskip
+\begin{align*}
+    a_c &= \frac{v^2}{r} = \omega^2 r 
+    & \text{(centripetal acceleration)} \\
+    v &= \omega r 
+    & \text{(relation between speed and angular speed)} \\
+    \omega &= 2\pi f 
+    & \text{(angular speed from frequency)} \\
+    T &= \frac{1}{f} 
+    & \text{(period \& frequency relation)} \\
+\end{align*}
+
+\bigskip
+\paragraph*{\bf Work \& Energy}
+\smallskip
+\begin{align*}
+    W &= \vec{F}\cdot\Delta\vec{r} 
+    & \text{(work by a constant force)} \\
+    K &= \frac{1}{2}mv^2 
+    & \text{(kinetic energy)} \\
+    \Delta K &= W_{\text{net}} 
+    & \text{(work--energy theorem)} \\
+    U_{\text{near Earth}} &= mgh 
+    & \text{(approx.\ gravitational potential energy for small $h$)} \\
+\end{align*}
+
+\bigskip
+\paragraph*{\bf Gravitation and Orbits}
+\smallskip
+\begin{align*}
+    F_g &= G\frac{m_1 m_2}{r^2} 
+    & \text{(Newton's law of universal gravitation)} \\
+    U(r) &= -\dfrac{GMm}{r} 
+    & \text{(gravitational potential energy for point mass / sphere)} \\
+    a_g(r) &= \frac{GM}{r^2} 
+    & \text{(gravitational acceleration at distance $r$)} \\
+    v_{\text{orbit}} &= \sqrt{\frac{GM}{r}} 
+    & \text{(speed in a circular orbit)} \\
+    T_{\text{orbit}} &= 2\pi\sqrt{\frac{r^3}{GM}} 
+    & \text{(period of a circular orbit)} \\
+    E_{\text{orbit}} &= -\frac{GMm}{2r} 
+    & \text{(total mechanical energy of a circular orbit)} \\
+\end{align*}
 
 \end{document}
