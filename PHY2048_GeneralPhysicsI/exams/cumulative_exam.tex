@@ -202,6 +202,20 @@ A helicopter's height above the ground can be modeled in 1D (vertical $y$-axis):
     \]
     where $v_y$ is positive when ascending and negative when descending.
 
+    \textit{Example (constant speed):}  
+    Suppose $y_0 = \SI{20}{m}$ (starting height) and the helicopter climbs straight up with
+    $v_y = \SI{5}{m/s}$.  
+    After $t = \SI{4}{s}$:
+    \[
+        y(4) = 20 + (5)(4) = \SI{40}{m}.
+    \]
+
+    To find the time to reach $y = \SI{80}{m}$:
+    \[
+        y = y_0 + v_y t \quad\Rightarrow\quad
+        80 = 20 + 5t \Rightarrow t = \frac{60}{5} = \SI{12}{s}.
+    \]
+
     \item \textbf{With constant vertical acceleration (e.g., gravity)}
     \[
         y(t) = y_0 + v_{0y} t + \frac{1}{2} a_y t^2,
@@ -210,8 +224,19 @@ A helicopter's height above the ground can be modeled in 1D (vertical $y$-axis):
     \[
         v_y(t) = v_{0y} + a_y t.
     \]
-    Use these to find time, height, or velocity when the helicopter passes a certain point or reaches a specified altitude.
+
+    \textit{Example (constant acceleration):}  
+    Let $y_0 = \SI{50}{m}$, $v_{0y} = \SI{2.0}{m/s}$ (upward), and $a_y = -\SI{9.8}{m/s^2}$ (gravity downward).
+    \begin{align*}
+        y(1.0) &= 50 + (2.0)(1.0) + \frac{1}{2}(-9.8)(1.0)^2 \\
+               &= 50 + 2.0 - 4.9 = \SI{47.1}{m}, \\
+        v_y(1.0) &= 2.0 + (-9.8)(1.0) = -\SI{7.8}{m/s}
+        \quad\text{(moving downward after 1 s).}
+    \end{align*}
+
+    Use these forms to solve for \emph{time}, \emph{height}, or \emph{velocity} when the helicopter passes a certain point or reaches a specified altitude.
 \end{enumerate}
+
 
 %%%%%%%%%%%%%%%%% CHAPTER 3 QUIZ SECTION %%%%%%%%%%%%%%%%%%
 
